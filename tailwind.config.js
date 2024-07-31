@@ -4,7 +4,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      overflow: {
+        'clip': 'clip',
+      },
+      colors: {
+        customDarkGray: '#212529',
+        customBeige: '#EADDCA',
+      },
+    },
   },
   plugins: [],
 }
