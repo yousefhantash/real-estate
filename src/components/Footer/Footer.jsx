@@ -4,7 +4,7 @@ export default function Footer(){
     return (
       
     <div className="m-0 p-0 box-border">
-      <footer className="w-4/5 bg-customBeige mx-auto p-12">
+      <footer className="w-full bg-customBeige mx-auto p-12">
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div className='ml-[37px] px-[15px]'>
           <h2 className="text-[24px] mb-[8px] text-customDarkGray">Contact Us</h2>
@@ -51,7 +51,7 @@ export default function Footer(){
         </div>
       </div>
       </footer>
-      <div className="text-[14px] w-4/5 mx-auto  mt-[0px] mb-[10px] pt-[20px] pb-[20px] text-center text-gray-600 bg-white rounded-b-xl">
+      <div className="text-[14px] w-full mx-auto  mt-[0px] mb-[10px] pt-[20px] pb-[20px] text-center text-gray-600 bg-white rounded-b-xl">
         © 2024 <span className='text-blue-600 py-[8px] hover:text-sky-300 '>Palestine.</span> All rights reserved.
       </div>
     </div> 
