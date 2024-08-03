@@ -5,7 +5,7 @@ export default function Footer(){
       
     <div className="m-0 p-0 box-border">
       <footer className="w-full bg-customBeige mx-auto p-12">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
         <div className='ml-[37px] px-[15px]'>
           <h2 className="text-[24px] mb-[8px] text-customDarkGray">Contact Us</h2>
           <p className="mb-[16px] text-gray-600">We are here to help and answer your questions, and we are always happy to hear from you.</p>
@@ -29,7 +29,7 @@ export default function Footer(){
             <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Building</a></li>
           </ul>
         </div>
-        <div className='px-[15px]'>
+        <div className='mx-[37px] px-[15px]'>
           <h2 className="text-[24px] text-customDarkGray mb-[8px]">Website</h2>
           <ul className="space-y-2">
             <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">About</a></li>
@@ -41,7 +41,7 @@ export default function Footer(){
             <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Contact Us</a></li>
           </ul>
         </div>
-        <div className='px-[15px] mr-[37px]'>
+        <div className='mx-[37px] px-[15px] mr-[37px] w-[80%]'>
           <h2 className="text-[24px] text-customDarkGray mb-[8px]">Subscribe</h2>
           <p className="mb-[16px] text-gray-600">Enter your email to get notified about our new Real Estate.</p>
           <form className="flex flex-col sm:flex-row">
