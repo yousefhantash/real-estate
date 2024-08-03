@@ -1,12 +1,11 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import FindP from '../components/FindP'
+import Navbar from '../components/Navbar'
 import Platform from '../components/Platform'
-import withWarpper from '../HOC/withWarpper'
 
 
 
-  function Home() {
+  export default function Home() {
   return (
     <div>
       <Navbar/>
@@ -17,5 +16,3 @@ import withWarpper from '../HOC/withWarpper'
 }
 
 
-const WarppedHome = withWarpper(Home) ;
-export default WarppedHome ;

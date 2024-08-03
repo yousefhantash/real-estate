@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 function Navbar() {
   return (
     
-<nav className=' flex justify-center w-[1310px] rounded-t-lg bg-white min-h-[94px]' >
+<nav className=' flex justify-center w-[full] rounded-t-lg bg-white min-h-[94px]' >
   
 <div className='  gap-44 flex justify-center items-center  '>
 

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 
 function FindP() {
   return (
-    <div className="flex items-center justify-center bg-[#DEEFF9] h-[280px]  w-[1310px] ">
+    <div className="flex items-center justify-center bg-[#DEEFF9] h-[280px]  w-[full] ">
 
         <div className=" min-h-[77px]  flex flex-col items-start gap-4 ">
 

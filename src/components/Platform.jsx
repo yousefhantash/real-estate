@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 function Platform() {
   return (
-    <div className= "bg-[#f5f9ff] grid grid-cols-2 justify-items-center  w-[1310px] " >
+    <div className= "bg-[#f5f9ff] grid grid-cols-2 justify-items-center  w-[full] " >
         
         <div className="flex items-start justify-center  h-[620px] w-[435px] my-20  ">
 

@@ -1,5 +1,5 @@
+import Footer from './components/Footer/Footer';
 import Home from './views/Home';
-
 
 
 
@@ -8,7 +8,7 @@ function App() {
     <div className="bg-[#F5F2EF]">
 
         <Home />
-    
+        <Footer/>
      </div>
     
 
