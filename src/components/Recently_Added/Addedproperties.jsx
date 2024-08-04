@@ -4,6 +4,7 @@ import btn_icon from "../../images/Recentlyaddedproperties/Vector.png";
 import './RecentlyAdded';
 
 import {LandContext} from './RecaddedData';
+import { Link, NavLink } from 'react-router-dom';
 
 
 
@@ -16,7 +17,7 @@ function Addedproperties() {
 
 
      
-     
+
 // here a map for the last 4 items from the data so it  appers in the recently add 
 
     return (<>
@@ -56,7 +57,9 @@ function Addedproperties() {
             </div>
           </div>
           <div className='rec-det-btn flex lg:w-40 lg:h-15'>
-            <button className='mx-auto '><img src={btn_icon} alt="Details" /> Details</button>
+          <NavLink to={`/properties/post/:${item.title}`} className='mx-auto'>
+            <button ><img src={btn_icon} alt="Details" /> Details</button>
+            </NavLink>
           </div>
         </div>
 </div>
