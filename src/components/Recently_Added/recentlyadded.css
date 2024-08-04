@@ -1,0 +1,19 @@
+*{}
+.rec-det-btn{
+    background-color: rgb(14, 136, 226);
+    ;
+    
+    font-weight:300;
+border-radius: 10px;
+padding: 10px;
+text-align: center;
+color: wheat;
+margin-left: 5px;
+cursor: pointer;
+transition: 0.5s;
+}
+
+
+.rec-det-btn:hover{
+    background-color: #343a40;
+}

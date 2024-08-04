@@ -5,11 +5,10 @@ import Home from './views/Home';
 
 function App() {
   return (
-    <div className="bg-[#F5F2EF]">
 
+    <div className="bg-[#F5F2EF]">
         <Home />
-        <Footer/>
-     </div>
+    </div>
     
 
   );
