@@ -5,7 +5,7 @@ import Selling from './Selling';
 import Renting from './Renting';
 function OverView() {
   return (
-    <div className='bg-custom-Almond mx-auto container border-t pb-36'>
+    <div className=' mx-auto container border-t pb-36'>
       <h1 className='text-center text-xl py-10 font-medium	'>
         Whether you want to buy, sell or rent, we're here to help.
       </h1>
