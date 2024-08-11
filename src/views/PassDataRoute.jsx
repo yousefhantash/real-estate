@@ -48,7 +48,7 @@ function PassDataRoute() {
     </div>
 </div>);
   }
-// if there is an error do this
+// if there is an it will do this 
   if (error) {
     return <img src={error404Image} alt='error404' className="w-full h-full"
     />
