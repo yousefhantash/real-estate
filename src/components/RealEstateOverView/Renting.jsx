@@ -1,6 +1,6 @@
 import React from 'react'
 import "./OverView.css";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Ow3Rent from "../../images/Recentlyaddedproperties/Home-OverView/OW3rent.png";
 
 function Renting() {
@@ -15,11 +15,11 @@ faster way, one place for everyone in
 which to combine the owner and the
 tenant.
     </p>
-        <Link to="">
+        <NavLink  to="">
 <button className="px-10 py-2 bg-custom-blue rounded text-white hover:bg-blue-400 transition duration-300">
   Find a property to rent
 </button>
-</Link>
+</NavLink >
   </div>
   )
 }

@@ -21,7 +21,7 @@ function Addedproperties() {
     return (<>
     {data.slice(-4).map((item, index) => (
               
-              <PropsItem item={item}/>
+              <PropsItem item={item} key={item.id}/>
       ))}
       </>
   )
