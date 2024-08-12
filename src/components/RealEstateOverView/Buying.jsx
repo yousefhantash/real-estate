@@ -1,7 +1,7 @@
 import React from 'react'
 import Ow1Search from "../../images/Recentlyaddedproperties/Home-OverView/OW1search.png";
 import "./OverView.css";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function Buying() {
   return (
@@ -11,11 +11,11 @@ function Buying() {
     <p className=' mx-14 pb-8'>
       Find the property of the future with a quick search engine experience and a simple interface that you won't find anywhere else.
     </p>
-    <Link to="">
+    <NavLink  to="">
 <button className='my-14  px-10 py-2 bg-custom-blue rounded text-white hover:bg-blue-400 duration-300'>
       Search for a Property
     </button>
-    </Link>
+    </NavLink >
   </div>
 
   )

@@ -14,7 +14,7 @@ function Navbar() {
 </div>
 
 <ul className='flex justify-center items-center gap-9'>
-  <li><NavLink to="/"><a className='text-[#0056B3] font-medium '>Home</a></NavLink></li>
+  <li><NavLink to="/" className='text-[#0056B3] font-medium '>Home</NavLink></li>
   <li><a className='text-[#6C757D]'>Properties</a></li>
   <li><a className='text-[#6C757D]'>Conect Us</a></li>
 </ul>
