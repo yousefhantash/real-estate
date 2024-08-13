@@ -9,7 +9,7 @@ function App() {
 
   return (
 
-    <div className="bg-[#F5F2EF]">
+    <div>
 <PassDataRoute/>
     </div>
     
