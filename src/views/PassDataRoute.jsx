@@ -2,10 +2,13 @@ import React, { createContext, useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './Home'
 import Details from '../components/Detailspage/Details'
+import Policy from './Policy'
+import Terms from './Terms'
 
 import { getdata } from '../API/api';
 //  i made this whole page to pass the data to all pages through the work 
 import AdvertiseProperty from "./../components/AdvertiseProprtiespage/AdvertiseProperty"
+import Contactus from './Contactus';
 export const LandContext=createContext();
 
 function PassDataRoute() {
@@ -46,6 +49,9 @@ console.log(data)
                     <BrowserRouter >
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/contact" element={<Contactus/>} />
+      <Route path="/policy" element={<Policy/>} />
+      <Route path="/terms" element={<Terms/>} />
       <Route path="/properties/post/:title" element={<Details />} />
       <Route path="/create" element={<AdvertiseProperty/>}/>
     </Routes>

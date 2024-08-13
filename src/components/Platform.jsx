@@ -2,9 +2,9 @@ import React from 'react';
 
 function Platform() {
   return (
-    <div className= "bg-[#f5f9ff] grid grid-cols-2 justify-items-center  w-[full] " >
+    <div className= "bg-[#f5f9ff] grid grid-cols-1 lg:grid-cols-2 justify-items-center w-full" >
         
-        <div className="flex items-start justify-center  h-[620px] w-[435px] my-20  ">
+        <div className="flex items-start justify-center h-[620px] w-[435px] my-20 hidden lg:flex">
 
           <div className="relative  w-[310px] h-[310px] border-4 border-[#5C94B4] rounded-tr-lg" >
             
