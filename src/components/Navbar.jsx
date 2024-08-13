@@ -26,7 +26,9 @@ function Navbar() {
   </button>
 
   <button className="w-[200px] h-[34px] bg-[#FF7900] text-white rounded">
-    Advertise a Property
+   <NavLink to="/create">
+     Advertise a Property
+    </NavLink>
   </button>
 
 </div>

@@ -4,7 +4,8 @@ import Navbar from '../components/Navbar'
 import Platform from '../components/Platform'
 import Footer from '../components/Footer/Footer'
 import RecaddedData from '../components/Recently_Added/RecaddedData'
-
+import PropertyList from "../components/Properitylisthomepage/PropertyList"
+import Statistics from "../components/Properitylisthomepage/Statistics"
 
 
   export default function Home() {
@@ -14,6 +15,8 @@ import RecaddedData from '../components/Recently_Added/RecaddedData'
       <Navbar/>
       <FindP/>
       <Platform/>
+      <PropertyList/>
+      <Statistics/>
       <RecaddedData/>
       <Footer/>
 
