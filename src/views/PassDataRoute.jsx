@@ -4,11 +4,13 @@ import Home from './Home'
 import Details from '../components/Detailspage/Details'
 import Policy from './Policy'
 import Terms from './Terms'
-
+import Signin from "./../Admin-signinpage/Signin"
+import Admin from "./../AdminPage/Admin"
 import { getdata } from '../API/api';
 //  i made this whole page to pass the data to all pages through the work 
 import AdvertiseProperty from "./../components/AdvertiseProprtiespage/AdvertiseProperty"
 import Contactus from './Contactus';
+import About from './About'
 export const LandContext=createContext();
 
 function PassDataRoute() {
@@ -52,8 +54,12 @@ console.log(data)
       <Route path="/contact" element={<Contactus/>} />
       <Route path="/policy" element={<Policy/>} />
       <Route path="/terms" element={<Terms/>} />
+      <Route path="/about" element={<About/>}/>
       <Route path="/properties/post/:title" element={<Details />} />
       <Route path="/create" element={<AdvertiseProperty/>}/>
+      <Route path="/adminsignin" element={<Signin/>}/>
+      <Route path="/admin" element={<Admin/>}/>
+      
     </Routes>
     </BrowserRouter>
     </LandContext.Provider>

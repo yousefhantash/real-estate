@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 export default function Footer(){
 
@@ -16,31 +17,30 @@ export default function Footer(){
           </div>
         </div>
         <div className='mx-[37px] px-[15px]'>
-          <h2 className="text-[24px] text-customDarkGray mb-[8px]">Properties</h2>
-          <ul className="space-y-2 pb-[20px]">
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Land</a></li>
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">House</a></li>
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Apartment</a></li>
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Penthouse Apartment</a></li>
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Villa</a></li>
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Office</a></li>
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Shop</a></li>
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Storage</a></li>
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Building</a></li>
-          </ul>
-        </div>
+  <h2 className="text-[24px] text-customDarkGray mb-[8px]">Properties</h2>
+  <nav>
+    <ul className="space-y-2 pb-[20px]">
+      <li><NavLink to="/land" className="text-gray-600 hover:underline py-[4px]">Land</NavLink></li>
+      <li><NavLink to="/house" className="text-gray-600 hover:underline py-[4px]">House</NavLink></li>
+      <li><NavLink to="/apartment" className="text-gray-600 hover:underline py-[4px]">Apartment</NavLink></li>
+      <li><NavLink to="/villa" className="text-gray-600 hover:underline py-[4px]">Villa</NavLink></li>
+      <li><NavLink to="/office" className="text-gray-600 hover:underline py-[4px]">Office</NavLink></li>
+      <li><NavLink to="/shop" className="text-gray-600 hover:underline py-[4px]">Shop</NavLink></li>
+      <li><NavLink to="/building" className="text-gray-600 hover:underline py-[4px]">Building</NavLink></li>
+    </ul>
+  </nav>
+</div>
         <div className='mx-[37px] px-[15px]'>
-          <h2 className="text-[24px] text-customDarkGray mb-[8px]">Website</h2>
-          <ul className="space-y-2">
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">About</a></li>
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Roadmap</a></li>
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Privacy Policy</a></li>
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Terms and Use</a></li>
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Help</a></li>
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Blog</a></li>
-            <li><a href="http://localhost:3000/" className="text-gray-600 hover:underline py-[4px]">Contact Us</a></li>
-          </ul>
-        </div>
+  <h2 className="text-[24px] text-customDarkGray mb-[8px]">Website</h2>
+  <nav>
+    <ul className="space-y-2">
+      <li><NavLink to="/about" className="text-gray-600 hover:underline py-[4px]">About</NavLink></li>
+      <li><NavLink to="/policy" className="text-gray-600 hover:underline py-[4px]">Privacy Policy</NavLink></li>
+      <li><NavLink to="/terms" className="text-gray-600 hover:underline py-[4px]">Terms and Use</NavLink></li>
+      <li><NavLink to="/contact" className="text-gray-600 hover:underline py-[4px]">Contact Us</NavLink></li>
+    </ul>
+  </nav>
+</div>
         <div className='mx-[37px] px-[15px] mr-[37px] w-[80%]'>
           <h2 className="text-[24px] text-customDarkGray mb-[8px]">Subscribe</h2>
           <p className="mb-[16px] text-gray-600">Enter your email to get notified about our new Real Estate.</p>

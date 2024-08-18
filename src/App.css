@@ -37,3 +37,13 @@
     transform: rotate(360deg);
   }
 }
+
+
+.sections .active{
+  color:#0056b3;
+}
+.adv .active{
+  color: black;
+  opacity: 0.5;
+  background: #ffc107;
+}

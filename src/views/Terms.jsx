@@ -7,7 +7,7 @@ function Terms() {
     <div>
     <Navbar/>
     <div className='small-bg-city'></div>
-    <div className=' p-24 flex flex-col bg-[#e6ecf5]'>
+    <div className=' p-24 flex flex-col '>
       <div className='px-24 py-10 flex flex-col border border-[#6C757D] rounded-lg  '>
           
             <h1 className=" text-3xl font-bold mb-8 text-[#0056B3]">Terms and Use</h1>
