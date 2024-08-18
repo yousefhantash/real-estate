@@ -92,7 +92,7 @@ return (
         <div className="form-group">
             <label>Currency</label>
             <select>
-            <option>USD</option>
+            <option>JOD</option>
             {/* Add more currencies */}
             </select>
         </div>
@@ -105,20 +105,7 @@ return (
             {/* Add more cities */}
             </select>
         </div>
-        <div className="form-group">
-            <label>Location</label>
-            <select>
-            <option>Location</option>
-            {/* Add more locations */}
-            </select>
-        </div>
-        <div className="form-group">
-            <label>Area classification (Optional)</label>
-            <select>
-            <option>Choose</option>
-            {/* Add more classifications */}
-            </select>
-        </div>
+
         </div>
         <div className="form-group">
         <label>Address</label>
