@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer/Footer'
 
 function About() {
   return (
@@ -45,6 +46,8 @@ The basic idea of ​​the platform expresses a specialized real estate market 
 
 
          </div>
+
+<Footer/>
     </div>
   )
 
