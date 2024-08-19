@@ -13,30 +13,35 @@ const navigate=useNavigate();
     <div>
    
       <div className="flex flex-col justify-center items-center h-screen">
-      <div className="flex items-start ml-1.5 xl   justify-center mt-[2em]">
+      <div className="flex items-start ml-1.5 xl   justify-center mt-[2em]  ">
     <h1 className="text-[#CF991E] sm:text-[20px] md:text-[30px] text-[40px] font-bold "> ME</h1>
-    <h1 className="text-[#0056B3] sm:text-[20px] md:text-[30px] text-[40px] tracking-[4.00px] mt-1 font-bold _">Palestine</h1>
+    <h1 className="text-[#0056B3] sm:text-[20px] md:text-[30px] text-[40px] tracking-[4.00px] mt-1 font-bold ">Palestine</h1>
     </div>
+      <div className=' shadow-xl border p-20 rounded-md'>
+      <div className='text-center  my-[20px] text-[#CF991E] text-[30px]  font-bold text-2xl'> Login</div>
        <Formik className=""
        initialValues={{ email: '', password: '' }}
        validate={values => {
          const errors = {};
-         if (!values.email) {
-           errors.email = 'Required';
+         if (!values.email ) {
+           errors.email = <p className='text-red-600 font-bold '>Required</p>;
+           errors.password = <p className='text-red-600 font-bold '>Required</p>;
           } else if (
             !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
           ) {
             errors.email = 'Invalid email address';
           }
           return errors;
-        }}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
-        }}
-        >
+        }
+        
+      }
+      onSubmit={(values, { setSubmitting }) => {
+        setTimeout(() => {
+          alert(JSON.stringify(values, null, 2));
+          setSubmitting(false);
+        }, 400);
+      }}
+      >
        {({
          values,
          errors,
@@ -48,9 +53,9 @@ const navigate=useNavigate();
          /* and other goodies */
         }) => (
           <form onSubmit={handleSubmit} className=''>
-            <div className='text-center text-xl my-[20px] text-[#CF991E] text-[30px]  font-bold'> Login</div>
+   
 
-            <span>Email</span>
+            <span className='font-bold'>Email</span>
            <input  className={` border-black	my-[10px] w-full p-3 border rounded-lg shadow-sm     focus:outline-none focus:ring-2 focus:ring-blue-500 `}
              type="email"
              name="email"
@@ -59,8 +64,8 @@ const navigate=useNavigate();
              value={values.email}
              />
            {errors.email && touched.email && errors.email}
-           <span>Password</span>
-
+           <div className='mt-[10px]'><span className='font-bold'>Password</span>
+           </div>
            <input className=' border-black	 block my-[10px] w-full p-3 border rounded-lg shadow-sm     focus:outline-none focus:ring-2 focus:ring-blue-500 `'
              type="password"
              name="password"
@@ -79,6 +84,7 @@ const navigate=useNavigate();
        </div>
 
 
+       </div>
     </div>
   )
 }
