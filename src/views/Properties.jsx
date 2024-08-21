@@ -10,6 +10,7 @@ import AllOffers from '../images/Properties/AllOffers.png';
 import { LandContext } from './PassDataRoute';
 
 export default function Properties() {
+  
   const data = useContext(LandContext);
   const location = useLocation();
   const navigate = useNavigate();

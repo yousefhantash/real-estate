@@ -1,14 +1,14 @@
 import React from 'react'
-import Navbar from './../components/Navbar'
 import Footer from './../components/Footer/Footer'
+import Navbar from './../components/Navbar'
 
 function Policy() {
   return (
 <div>
     <Navbar/>
-    <div className='small-bg-city'></div>
-    <div className=' p-24 flex flex-col'>
-      <div className=' px-24 py-10 flex flex-col border border-[#6C757D] rounded-lg  '>
+    <div className='bg-customprivacy small-bg-city'></div>
+    <div className='bg-customprivacy p-24 flex flex-col'>
+      <div className='bg-customprivacy px-24 py-10 flex flex-col'>
           
             <h1 className=" text-3xl font-bold mb-8 text-[#0056B3]">Privacy Policy</h1>
             
