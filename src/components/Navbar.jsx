@@ -44,10 +44,13 @@ function Navbar() {
             )}
           </li>
 
-          <li>
-            <NavLink to="/contact" className='text-[#6C757D] hover:text-[#0056B3] font-medium'>Contact Us</NavLink>
-          </li>
-        </ul>
+  <button className="adv">
+   <NavLink to="/create" className='flex items-center justify-center  w-[210px] h-[35px] bg-[#FF7900] text-white rounded'>
+     Advertise a Property
+    </NavLink>
+  </button>
+  <div className='font-semibold text-amber-500 my-[10px] underline'> <NavLink to="/adminsignin">Admin</NavLink></div>
+      
 
         <div className="flex flex-col md:flex-row gap-2 mt-4 md:mt-0">
           <button className="adv">

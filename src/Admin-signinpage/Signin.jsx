@@ -25,12 +25,15 @@ const navigate=useNavigate();
          const errors = {};
          if (!values.email ) {
            errors.email = <p className='text-red-600 font-bold '>Required</p>;
-           errors.password = <p className='text-red-600 font-bold '>Required</p>;
           } else if (
             !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
           ) {
             errors.email = 'Invalid email address';
           }
+          if(!values.password){
+            errors.password = <p className='text-red-600 font-bold '>Required</p>;
+          }else if(values.password.length < 8){      errors.password = <p className='text-red-600 font-bold '>Password must be at least 8 characters long</p>;
+        }
           return errors;
         }
         
