@@ -27,6 +27,7 @@ function Navbar() {
      Advertise a Property
     </NavLink>
   </button>
+  <div className='font-semibold text-amber-500 my-[10px] underline'> <NavLink to="/adminsignin">Admin</NavLink></div>
 
 </div>
 </div>
