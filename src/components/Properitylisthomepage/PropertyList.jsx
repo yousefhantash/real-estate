@@ -1,5 +1,5 @@
-    import React from 'react';
-import "./propertieslist.css"
+import React from 'react';
+import "./propertieslist.css";
     const PropertyList = () => {
     const properties = [
         { city: 'Ramallah', color: '#e5a0fd' },
