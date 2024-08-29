@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Formik } from 'formik';
+import Navbar from '../components/Navbar';
 
 function Admin() {
  return (

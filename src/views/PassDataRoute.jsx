@@ -12,24 +12,33 @@ import AdvertiseProperty from "./../components/AdvertiseProprtiespage/AdvertiseP
 import About from './About'
 import Contactus from './Contactus'
 import Properties from './Properties'
+import Get from '../API/Get'
+import SearchedPage from '../components/Search/SearchedPage'
 export const LandContext=createContext();
 
 function PassDataRoute() {
      // data for the data from dummby json and the loading to wait till the page till its load and then it appers and the error if there is a problem in the link or in the data itself
   const [data, setData] = useState([]);
+  const [approvedData,setApproveData]=useState([]);
   const [loading,Setloading]=useState(true);
   const [error, setError] = useState(null);
 
 
   // we got here the fake api calls from dummby json 
 
+
+  // 
   useEffect(() => {
 const getData=async()=>{
 try{
 
-  const result=await getdata();
+  const result=await Get();
   setData(result);
+  console.log(result)
+ const approvedResult=result.filter(item=>{return item.isApproved===true})
+setApproveData(approvedResult)
 }
+
 catch{
   setError("Failed to get data")
 }
@@ -40,24 +49,31 @@ finally {
 getData();
 
   }, []);
-
 console.log(data)
  
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;
 
+// 
+
+
+  
   return (
     <div>
-           <LandContext.Provider value={data}> 
+           <LandContext.Provider value={approvedData}> 
                     <BrowserRouter >
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/property" element={<Properties/>} />
+      <Route path="/property" element={<Properties/>} >
+
+      <Route path=":title" element={<Properties/>}/>
+      </Route>
+      <Route path="property/post/:title" element={<Details />} />
+      <Route path="/searched/:title" element={<SearchedPage/>} />
       <Route path="/contact" element={<Contactus/>} />
       <Route path="/policy" element={<Policy/>} />
       <Route path="/terms" element={<Terms/>} />
       <Route path="/about" element={<About/>}/>
-      <Route path="/properties/post/:title" element={<Details />} />
       <Route path="/create" element={<AdvertiseProperty/>}/>
       <Route path="/adminsignin" element={<Signin/>}/>
       <Route path="/admin" element={<Admin/>}/>

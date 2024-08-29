@@ -14,7 +14,7 @@ const data=useContext(LandContext)
 const item=location.state
 
 const RealData=data.filter((product)=>{
- return product.id==item.id
+ return product.city==item.city
 })
 console.log(RealData)
 
@@ -26,7 +26,7 @@ console.log(RealData)
 {/*  */}
 
 
-<h1 className="text-center mt-[40px] mb-[15px] text-custom-midblue capitalize ">{item.title} [Property ID {item.id}]  </h1>
+<h1 className="text-center mt-[40px] mb-[15px] text-custom-midblue capitalize ">{item.name} [Property ID {item.propertyId}]  </h1>
 <p className='text-center '>{item.description}</p>
 <img src={item1} alt="" className='mx-auto my-[30px] md:w-[301px] md:h-[341px]' />
 <DetailsBdoy item={item}/>  
@@ -38,7 +38,7 @@ console.log(RealData)
 
 <h1 className='font-semibold mt-10 pt-10  text-2xl text-custom-darkblue'>Related Properties</h1>
 {RealData.slice(0,3).map((ele)=>(
-<PropsItem key={ele.id} item={ele}/>
+<PropsItem key={ele.propertyId} item={ele}/>
 ))}
 
 

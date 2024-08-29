@@ -9,19 +9,23 @@ import { LandContext } from '../../views/PassDataRoute';
 
 function Addedproperties() {
   // here we got the data from the home.jsx and we use useContext
+// 
   const data = useContext(LandContext);
-   
+  //  
 
 
 
      
 
 // here a map for the last 4 items from the data so it  appers in the recently add 
-
+// 
     return (<>
     {data.slice(-4).map((item, index) => (
-              
-              <PropsItem item={item} key={item.id}/>
+// 
+
+
+
+<PropsItem item={item} key={item.propertyId}/>
       ))}
       </>
   )

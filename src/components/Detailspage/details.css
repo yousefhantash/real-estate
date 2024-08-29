@@ -4,3 +4,5 @@ background-image: url('../../images/Details/city-images2.svg.png');
     
     height: 102px;
 }
+.pricing:focus{
+display: none;}

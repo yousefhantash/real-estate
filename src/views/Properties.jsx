@@ -11,9 +11,9 @@ import { LandContext } from './PassDataRoute';
 
 export default function Properties() {
   
-  const data = useContext(LandContext);
   const location = useLocation();
   const navigate = useNavigate();
+  const data=location.state;
 
   const getQueryParam = (param) => {
     return new URLSearchParams(location.search).get(param);
@@ -41,14 +41,17 @@ export default function Properties() {
     <div>
       <Navbar />
       <FindP />
-      <img className="w-full" src={AllOffers} alt="at" />
-      <div className="container mx-auto p-4">
+      <div className='flex flex-col justify-center items-center bg-slate-400 p-6'>
+        <h1 className='text-white text-[20px] p-4'>Properties</h1>
+        <h1 className='text-white text-[40px] p-4'>{}</h1>
+        <p className='text-white p-4'></p>
+      </div>      <div className="container mx-auto p-4">
         {currentListings.length === 0 ? (
           <p className="text-center text-gray-600">No properties available.</p>
         ) : (
           <>
             {currentListings.map((item, index) => (
-              <PropsItem item={item} key={item.id} />
+              <PropsItem item={item} key={item.propertyId} />
             ))}
             <Pagination
               currentPage={currentPage}

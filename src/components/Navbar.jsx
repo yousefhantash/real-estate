@@ -1,9 +1,41 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { LandContext } from '../views/PassDataRoute';
 
 function Navbar() {
-  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const data=useContext(LandContext)
+  const navigate=useNavigate();
+  const [dataproperty,setDataProperty]=useState([]);
 
+  const getDataByCity = (propType) => {
+    const cityData = data.filter((item) => propType === item.propertyType);
+    setDataProperty(cityData);
+    setTimeout(() => {
+      navigate(`/property/${propType}`, { state: cityData });
+    }, 0);
+  };
+
+const propertiesType=[
+{Type:"Land"}
+,
+{Type:"House"}
+,
+{Type:"Apartment"}
+,
+
+{Type:"Villa"}
+,
+{Type:"office"}
+,
+{Type:"Shop"}
+,
+
+]
+
+
+
+
+  const [dropdownVisible, setDropdownVisible] = useState(false);
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   };
@@ -31,16 +63,12 @@ function Navbar() {
             </button>
             {dropdownVisible && (
               <ul className='absolute left-0 top-full mt-2 bg-white shadow-lg rounded-md w-[200px]'>
-                <li><NavLink to="/property" className='block px-4 py-2 text-[#6C757D] hover:text-[#0056B3] hover:bg-gray-100'>All Properties</NavLink></li>
-                <li><NavLink to="/property/land" className='block px-4 py-2 text-[#6C757D] hover:text-[#0056B3] hover:bg-gray-100'>Land</NavLink></li>
-                <li><NavLink to="/property/house" className='block px-4 py-2 text-[#6C757D] hover:text-[#0056B3] hover:bg-gray-100'>House</NavLink></li>
-                <li><NavLink to="/property/apartment" className='block px-4 py-2 text-[#6C757D] hover:text-[#0056B3] hover:bg-gray-100'>Apartment</NavLink></li>
-                <li><NavLink to="/property/penthouse-apartment" className='block px-4 py-2 text-[#6C757D] hover:text-[#0056B3] hover:bg-gray-100'>Penthouse Apartment</NavLink></li>
-                <li><NavLink to="/property/villa" className='block px-4 py-2 text-[#6C757D] hover:text-[#0056B3] hover:bg-gray-100'>Villa</NavLink></li>
-                <li><NavLink to="/property/office" className='block px-4 py-2 text-[#6C757D] hover:text-[#0056B3] hover:bg-gray-100'>Office</NavLink></li>
-                <li><NavLink to="/property/shop" className='block px-4 py-2 text-[#6C757D] hover:text-[#0056B3] hover:bg-gray-100'>Shop</NavLink></li>
-                <li><NavLink to="/property/storage" className='block px-4 py-2 text-[#6C757D] hover:text-[#0056B3] hover:bg-gray-100'>Storage</NavLink></li>
-                <li><NavLink to="/property/building" className='block px-4 py-2 text-[#6C757D] hover:text-[#0056B3] hover:bg-gray-100'>Building</NavLink></li>
+                <li><NavLink to="/property"  state={data} className='block px-4 py-2 text-[#6C757D] hover:text-[#0056B3] hover:bg-gray-100'>All Properties</NavLink></li>
+          {propertiesType.map((item,index)=>(<li key={index}>                <button onClick={()=>{getDataByCity(item.Type)}} className='block px-4 py-2 text-[#6C757D] hover:text-[#0056B3] hover:bg-gray-100'>{item.Type}
+            
+</button>
+          </li>))}
+          
               </ul>
             )}
           </li>
@@ -64,4 +92,5 @@ function Navbar() {
     </nav>
   );
 }
+
 export default Navbar;
