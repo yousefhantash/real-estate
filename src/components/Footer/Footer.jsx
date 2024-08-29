@@ -1,6 +1,21 @@
-import { NavLink } from "react-router-dom";
+import { useContext, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { LandContext } from "../../views/PassDataRoute";
+import { propertiesType } from "../Proprties comp/ProprtiesType";
 
 export default function Footer(){
+  const data=useContext(LandContext)
+  const navigate=useNavigate();
+  const [dataproperty,setDataProperty]=useState([]);
+
+  const getDataByType = (propType) => {
+    const cityData = data.filter((item) => propType === item.propertyType);
+    setDataProperty(cityData);
+    setTimeout(() => {
+      navigate(`/property/${propType}`, { state: cityData });
+    }, 0);
+  };
+
 
     return (
       
@@ -20,13 +35,8 @@ export default function Footer(){
   <h2 className="text-[24px] text-customDarkGray mb-[8px]">Properties</h2>
   <nav>
     <ul className="space-y-2 pb-[20px]">
-      <li><NavLink to="/land" className="text-gray-600 hover:underline py-[4px]">Land</NavLink></li>
-      <li><NavLink to="/house" className="text-gray-600 hover:underline py-[4px]">House</NavLink></li>
-      <li><NavLink to="/apartment" className="text-gray-600 hover:underline py-[4px]">Apartment</NavLink></li>
-      <li><NavLink to="/villa" className="text-gray-600 hover:underline py-[4px]">Villa</NavLink></li>
-      <li><NavLink to="/office" className="text-gray-600 hover:underline py-[4px]">Office</NavLink></li>
-      <li><NavLink to="/shop" className="text-gray-600 hover:underline py-[4px]">Shop</NavLink></li>
-      <li><NavLink to="/building" className="text-gray-600 hover:underline py-[4px]">Building</NavLink></li>
+
+      {propertiesType.map((item,index)=>{return <button key={item.index} className="text-gray-600 hover:underline py-[4px] w-full" onClick={()=>{getDataByType(item.Type)}}><li className="" >{item.Type}</li></button>})}
     </ul>
   </nav>
 </div>

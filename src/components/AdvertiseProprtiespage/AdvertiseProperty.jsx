@@ -39,10 +39,7 @@ const AdvertiseProperty = () => {
                   <label>Phone</label>
                   <input type="text" placeholder="Phone" required />
                 </div>
-                <div className="form-group">
-                  <label>WhatsApp (Optional)</label>
-                  <input type="text" placeholder="WhatsApp" />
-                </div>
+            
               </div>
             </div>
 

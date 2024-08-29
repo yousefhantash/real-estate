@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import Ow2Sell from "../../images/Recentlyaddedproperties/Home-OverView/OW2sell.png";
 
 function Selling() {
+  
   return (
     <div className='bg-white shadow p-6 flex flex-col items-center hover:scale-110 duration-300 '>
 

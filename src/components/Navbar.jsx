@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { LandContext } from '../views/PassDataRoute';
+import { propertiesType } from './Proprties comp/ProprtiesType';
 
 function Navbar() {
   const data=useContext(LandContext)
@@ -15,22 +16,6 @@ function Navbar() {
     }, 0);
   };
 
-const propertiesType=[
-{Type:"Land"}
-,
-{Type:"House"}
-,
-{Type:"Apartment"}
-,
-
-{Type:"Villa"}
-,
-{Type:"office"}
-,
-{Type:"Shop"}
-,
-
-]
 
 
 
