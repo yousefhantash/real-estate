@@ -12,7 +12,7 @@ function Buying() {
   const searched = () => {
       const searchedData = data.filter((item) => {
         return (
-          (item.offerType === "For Sale")
+          (item.offerType==="For Sale")
         );
         
       }
@@ -32,6 +32,7 @@ function Buying() {
     <p className=' mx-14 pb-8'>
       Find the property of the future with a quick search engine experience and a simple interface that you won't find anywhere else.
     </p>
+    
 <button onClick={searched} className='my-14  px-10 py-2 bg-custom-blue rounded text-white hover:bg-blue-400 duration-300'>
       Search for a Property
     </button>
