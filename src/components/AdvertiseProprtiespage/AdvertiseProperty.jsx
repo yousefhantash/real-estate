@@ -3,6 +3,8 @@ import "./AdvertiseProperty.css";
 import cityImage from "./../../assets/city-images2.svg";
 import Navbar from "./../Navbar";
 import { NavLink } from "react-router-dom";
+import { propertiesType } from "../Proprties comp/ProprtiesType";
+import { Cities } from "../Proprties comp/Cities";
 const AdvertiseProperty = () => {
   return (
     <>
@@ -32,6 +34,7 @@ const AdvertiseProperty = () => {
                   <label>City</label>
                   <select>
                     <option>City</option>
+                    {Cities.map((item,index)=>(<option key={index} value={item}>{item}</option>))}
                     {/* Add more cities */}
                   </select>
                 </div>
@@ -50,14 +53,16 @@ const AdvertiseProperty = () => {
                 <div className="form-group">
                   <label>Offer</label>
                   <select>
-                    <option>For Sale</option>
-                    <option>For Rent</option>
+                    <option value="For Sale">For Sale</option>
+                    <option value="For Rent">For Rent</option>
                   </select>
                 </div>
                 <div className="form-group">
                   <label>Property Type</label>
                   <select>
                     <option>Choose</option>
+                  {propertiesType.map((item,index)=>(<option key={index}>{item.Type}</option>))}
+
                     {/* Add property types */}
                   </select>
                 </div>
@@ -68,7 +73,7 @@ const AdvertiseProperty = () => {
                 <div className="form-group">
                   <label>Measurement Unit</label>
                   <select>
-                    <option>Square meter</option>
+                    <option value="Square meter">Square meter</option>
                     {/* Add more units */}
                   </select>
                 </div>
@@ -76,10 +81,7 @@ const AdvertiseProperty = () => {
               <div className="form-row">
                 <div className="form-group">
                   <label>Range Rate</label>
-                  <select>
-                    <option>Range Rate</option>
-                    {/* Add more options */}
-                  </select>
+<input type="text" placeholder="Expected Price" />
                 </div>
                 <div className="form-group">
                   <label>Price Per</label>
@@ -101,6 +103,7 @@ const AdvertiseProperty = () => {
                   <label>City</label>
                   <select>
                     <option>City</option>
+                    {Cities.map((item,index)=>(<option value={item}>{item}</option>))}
                     {/* Add more cities */}
                   </select>
                 </div>

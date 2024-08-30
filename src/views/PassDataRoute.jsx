@@ -78,7 +78,7 @@ console.log(data)
       <Route path="/about" element={<About/>}/>
       <Route path="/create" element={<AdvertiseProperty/>}/>
       <Route path="/adminsignin" element={<Signin/>}/>
-      <Route path="/admin/adverties" element={<Admin/>}/>
+      <Route path="/admin/advertiesReq" element={<Admin/>}/>
 <Route path='/admin/allproprties' element={<Allproprties/>}/>
 <Route path='/admin/themessages' element={<Themessages/>}/>
 
