@@ -14,6 +14,8 @@ import Contactus from './Contactus'
 import Properties from './Properties'
 import Get from '../API/Get'
 import SearchedPage from '../components/Search/SearchedPage'
+import Allproprties from '../AdminPage/Allproprties'
+import Themessages from '../AdminPage/Themessages'
 export const LandContext=createContext();
 
 function PassDataRoute() {
@@ -76,7 +78,10 @@ console.log(data)
       <Route path="/about" element={<About/>}/>
       <Route path="/create" element={<AdvertiseProperty/>}/>
       <Route path="/adminsignin" element={<Signin/>}/>
-      <Route path="/admin" element={<Admin/>}/>
+      <Route path="/admin/adverties" element={<Admin/>}/>
+<Route path='/admin/allproprties' element={<Allproprties/>}/>
+<Route path='/admin/themessages' element={<Themessages/>}/>
+
       
     </Routes>
     </BrowserRouter>
