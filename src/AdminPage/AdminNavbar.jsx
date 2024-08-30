@@ -16,7 +16,7 @@ function AdminNavbar() {
       <ul className='flex flex-col md:flex-row md:gap-9 text-center md:text-left sections mt-5 ml-10 adnav '>
         
         <li>
-          <NavLink to="/admin/adverties" className='text-[#6C757D] hover:text-[#0056B3]  text-yellow-600 font-semibold'>Adverties Requests</NavLink>
+          <NavLink to="/admin/advertiesReq" className='text-[#6C757D] hover:text-[#0056B3]  text-yellow-600 font-semibold'>Adverties Requests</NavLink>
         </li>
           
         <li>
