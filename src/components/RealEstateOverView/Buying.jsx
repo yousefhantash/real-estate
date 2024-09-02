@@ -18,7 +18,7 @@ function Buying() {
       }
     ); 
     setTimeout(() => {
-      navigate(`/searched/${"ForSale"}`,{state:searchedData})
+      navigate(`/property/${"ForSale"}`,{state:searchedData})
 
     }, 0);
 

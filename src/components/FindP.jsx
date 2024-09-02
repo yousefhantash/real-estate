@@ -18,7 +18,8 @@ const navigate=useNavigate()
     }
   );
 
-  navigate(`/searched/${values.city}&${values.property}&${values.offerType}`,{state:searchedData})
+  navigate(`/property/${values.city}&${values.property}&${values.offerType}`, 
+  {state:searchedData})
 
     console.log(searchedData); 
   };

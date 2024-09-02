@@ -1,7 +1,29 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
 import "./Admin.css"
 function AdminNavbar() {
+const navigate=useNavigate();
+
+
+useEffect(()=>{
+if(localStorage.getItem("Email")==""){
+
+}
+else{
+  navigate("")
+}
+
+
+},[])
+
+const SignOutfunc=()=>{
+  localStorage.clear();
+navigate("");
+}
+
+
+
+
   return (
     <nav className='flex flex-col md:flex-row justify-center items-center bg-white min-h-[94px] p-4'>
     <div className='flex flex-col md:flex-row items-center gap-4 md:gap-40'>
@@ -26,6 +48,10 @@ function AdminNavbar() {
         <li>
           <NavLink to="/admin/themessages" className='text-[#6C757D] hover:text-[#0056B3] font-semibold text-yellow-600 '>The messages</NavLink>
         </li>
+        
+
+        <button className=" font-bold text-yellow-600" onClick={SignOutfunc}><div className='bg-blue-600 p-[10px] rounded  hover:bg-red-600  duration-200 '>Sign Out </div></button>
+       
         </ul>
   </nav>
   )
