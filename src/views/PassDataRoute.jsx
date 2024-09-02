@@ -71,7 +71,6 @@ console.log(data)
       <Route path=":title" element={<Properties/>}/>
       </Route>
       <Route path="property/post/:title" element={<Details />} />
-      <Route path="/searched/:title" element={<SearchedPage/>} />
       <Route path="/contact" element={<Contactus/>} />
       <Route path="/policy" element={<Policy/>} />
       <Route path="/terms" element={<Terms/>} />

@@ -7,8 +7,14 @@ import AdminNavbar from './AdminNavbar';
 import AdminPage from './AdminPage';
 
 function Admin() {
+
+
+  
   const handleAccept=()=>{}
   const handleRefuse=()=>{}
+
+
+
  return (
  <>
 <AdminNavbar/>

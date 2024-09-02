@@ -8,7 +8,18 @@ const navigate=useNavigate();
   const initialValue={email:"",
     password:""
   }
-  
+  const logInCheck=(Email,Password)=>{
+if(Email=="" && Password==""){
+navigate("")
+localStorage.setItem("Email",Email)
+
+}
+else{
+  navigate("")
+}
+
+
+  }
     return (
     <div>
    

@@ -19,7 +19,7 @@ function Renting() {
       }
     ); 
     setTimeout(() => {
-      navigate(`/searched/${"ForRent"}`,{state:searchedData})
+      navigate(`/property/${"ForRent"}`,{state:searchedData})
 
     }, 0);
 
