@@ -1,9 +1,8 @@
-import axios from "axios";
 import { api } from "./ApiCreate";
 
-const Get=async ()=>{
+const Get=async (data)=>{
 try{
-const response=await api.get("/api/Property/GetAllProperties")
+const response=await api.get(data)
 return response.data
 }catch(error){
     
