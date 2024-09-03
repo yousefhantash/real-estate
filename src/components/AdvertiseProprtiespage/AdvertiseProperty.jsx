@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AdvertiseProperty.css";
 import cityImage from "./../../assets/city-images2.svg";
 import Navbar from "./../Navbar";
@@ -6,6 +6,12 @@ import { NavLink } from "react-router-dom";
 import { propertiesType } from "../Proprties comp/ProprtiesType";
 import { Cities } from "../Proprties comp/Cities";
 const AdvertiseProperty = () => {
+const [propReq,setPropReq]=useState({});
+
+
+
+
+
   return (
     <>
       <Navbar />
