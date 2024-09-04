@@ -10,6 +10,8 @@ const resp=data.filter(item=>(
     item.city==city)
 )
 navigate(`/property/${city}`,{state:resp})
+window.scrollTo(0, 0)
+
 }
         
     const properties = [

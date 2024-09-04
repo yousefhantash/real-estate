@@ -14,10 +14,14 @@ function Navbar() {
     setTimeout(() => {
       navigate(`/property/${propType}`, { state: cityData });
     }, 0);
+    window.scrollTo(0, 0)
+
   };
 
 
-
+  const scrollTop=()=>{
+    window.scrollTo(0, 0)
+  }
 
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -36,7 +40,7 @@ function Navbar() {
         <ul className='flex flex-col md:flex-row md:gap-9 text-center md:text-left sections mt-5 '>
           
           <li>
-            <NavLink to="/" className='text-[#6C757D] hover:text-[#0056B3] font-medium'>Home</NavLink>
+            <NavLink to="/" onClick={scrollTop} className='text-[#6C757D] hover:text-[#0056B3] font-medium'>Home</NavLink>
           </li>
           
           <li className='relative'>
@@ -57,12 +61,12 @@ function Navbar() {
               </ul>
             )}
           </li>
-         <li>     <NavLink to="/contact" className='text-[#6C757D] hover:text-[#0056B3] font-medium'>Contact us</NavLink></li>
+         <li>     <NavLink onClick={scrollTop} to="/contact" className='text-[#6C757D] hover:text-[#0056B3] font-medium'>Contact us</NavLink></li>
 
 <li>
 
   <button className="adv">
-   <NavLink to="/create" className='flex items-center justify-center  w-[210px] h-[35px] bg-[#FF7900] text-white rounded'>
+   <NavLink onClick={scrollTop} to="/create" className='flex items-center justify-center  w-[210px] h-[35px] bg-[#FF7900] text-white rounded'>
      Advertise a Property
     </NavLink>
   </button>

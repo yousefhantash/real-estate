@@ -14,9 +14,13 @@ export default function Footer(){
     setTimeout(() => {
       navigate(`/property/${propType}`, { state: cityData });
     }, 0);
+      window.scrollTo(0, 0)
+
   };
 
-
+   const scrollTop=()=>{
+    window.scrollTo(0, 0)
+  }
     return (
       
     <div className="m-0 p-0 box-border">
@@ -44,10 +48,10 @@ export default function Footer(){
   <h2 className="text-[24px] text-customDarkGray mb-[8px]">Website</h2>
   <nav>
     <ul className="space-y-2">
-      <li><NavLink to="/about" className="text-gray-600 hover:underline py-[4px]">About</NavLink></li>
-      <li><NavLink to="/policy" className="text-gray-600 hover:underline py-[4px]">Privacy Policy</NavLink></li>
-      <li><NavLink to="/terms" className="text-gray-600 hover:underline py-[4px]">Terms and Use</NavLink></li>
-      <li><NavLink to="/contact" className="text-gray-600 hover:underline py-[4px]">Contact Us</NavLink></li>
+      <li><NavLink onClick={scrollTop} to="/about" className="text-gray-600 hover:underline py-[4px]">About</NavLink></li>
+      <li><NavLink onClick={scrollTop} to="/policy" className="text-gray-600 hover:underline py-[4px]">Privacy Policy</NavLink></li>
+      <li><NavLink onClick={scrollTop} to="/terms" className="text-gray-600 hover:underline py-[4px]">Terms and Use</NavLink></li>
+      <li><NavLink onClick={scrollTop} to="/contact" className="text-gray-600 hover:underline py-[4px]">Contact Us</NavLink></li>
     </ul>
   </nav>
 </div>
