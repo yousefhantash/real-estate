@@ -13,7 +13,7 @@ navigate(`/property/${city}`,{state:resp})
 }
         
     const properties = [
-        { city: 'Ramallah', color: '#e5a0fd' },
+        { city: 'Ramallah', color: '#e5a0fd'},
         { city: 'Jenin', color: '#61a3e7' },
         { city: 'Tulkarm', color: '#ce22f6' },
         { city: 'Bethlehem', color: '#acb7ca' },
