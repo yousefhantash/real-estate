@@ -4,7 +4,6 @@ function Platform() {
   return (
     <div className="bg-[#f5f9ff] grid grid-cols-1 lg:grid-cols-2 justify-items-center w-full px-4 md:px-10">
       
-      {/* Image Section */}
       <div className="flex items-start justify-center h-auto lg:h-[620px] w-full lg:w-[435px] my-10 lg:my-20 hidden lg:flex">
         <div className="relative w-[240px] md:w-[310px] h-[240px] md:h-[310px] border-4 border-[#5C94B4] rounded-tr-lg">
           <div className="absolute w-full h-full rounded-tr-lg" style={{ top: '20px', left: '40px' }}>
@@ -13,7 +12,6 @@ function Platform() {
         </div>
       </div>
 
-      {/* Text Section */}
       <div className="flex flex-col items-start gap-3.5 self-center h-auto lg:h-[620px] w-full lg:w-[435px] my-10 lg:my-20">
         
         <div className="text-xl md:text-2xl font-semibold text-[#5C94B4]">
