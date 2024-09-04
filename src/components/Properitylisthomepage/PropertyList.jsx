@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./propertieslist.css";
+import { useNavigate } from 'react-router-dom';
+import { LandContext } from '../../views/PassDataRoute';
     const PropertyList = () => {
+        const data=useContext(LandContext)
+        const navigate=useNavigate("")
+const SearchByCity=(city)=>{
+const resp=data.filter(item=>(
+    item.city==city)
+)
+navigate(`/property/${city}`,{state:resp})
+}
+        
     const properties = [
         { city: 'Ramallah', color: '#e5a0fd' },
         { city: 'Jenin', color: '#61a3e7' },
@@ -22,8 +33,11 @@ import "./propertieslist.css";
         <ul>
             {properties.map((property, index) => (
             <li key={index} >
+                <button className='hover:underline' onClick={()=>SearchByCity(property.city)}>
+
                 <span className="dot" style={{ backgroundColor: property.color }}></span>
                 {property.city} Real Estate
+                </button>
             </li>
             ))}
         </ul>
