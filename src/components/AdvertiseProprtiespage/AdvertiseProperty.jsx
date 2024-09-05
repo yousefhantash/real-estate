@@ -7,56 +7,70 @@ import { NavLink } from "react-router-dom";
 import { propertiesType } from "../Proprties comp/ProprtiesType";
 import { Cities } from "../Proprties comp/Cities";
 import "./AdvertiseProperty.css";
+import Post from "../../API/Post";
 
 const validationSchema = Yup.object({
   email: Yup.string().email("Invalid email").required("Email is required"),
-  name: Yup.string().required("Name is required"),
+  advertiserName: Yup.string().required("Name is required"),
   phone: Yup.string().required("Phone is required"),
   city: Yup.string().required("City is required"),
-  offer: Yup.string().required("Offer is required"),
+  address: Yup.string().required("Address is required"),
   propertyType: Yup.string().required("Property type is required"),
-  space: Yup.string().required("Space is required"),
+  offerType: Yup.string().required("Offer type is required"),
+  space: Yup.number().required("Space is required").positive("Must be a positive number"),
+  measurementUnit: Yup.string().required("Measurement unit is required"),
+  price: Yup.number().required("Price is required").positive("Must be a positive number"),
+  services: Yup.array().of(Yup.string()),
   agree: Yup.bool().oneOf([true], "You must agree to the terms"),
 });
 
 const AdvertiseProperty = () => {
+
+  const SubmitData = async (data) => {
+    console.log('Data inside SubmitData:', data);
+    try {
+      const response = await Post("/api/Property/SubmitAdvertiseRequest", data);
+      window.location.reload();
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
   return (
     <>
       <Navbar />
 
       <img src={cityImage} alt="City" className="w-full" />
-      <div className="container mx-auto  px-5 shadow-2xl  ">
-        <h1 className="form-title text-center text-2xl	my-[40px]	text-[#1a3462]">
+      <div className="container mx-auto px-5 shadow-2xl">
+        <h1 className="form-title text-center text-2xl my-[40px] text-[#1a3462]">
           Advertise a Property
         </h1>
-        <div className="advertise-property flex justify-center	text-[#6c757d]">
+        <div className="advertise-property flex justify-center text-[#6c757d]">
           <Formik
             initialValues={{
               email: "",
-              name: "",
+              advertiserName: "",
               phone: "",
               city: "",
-              offer: "For Sale",
-              propertyType: "",
-              space: "",
-              measurementUnit: "Square meter",
-              price: "",
-              pricePer: "Square meter",
-              currency: "JOD",
               address: "",
-              description: "",
-              agree: false,
+              propertyType: "",
+              offerType: "Sale",
+              space: "",
+              measurementUnit: "sqm",
+              price: "",
               services: [],
+              agree: false,
             }}
             validationSchema={validationSchema}
             onSubmit={(values) => {
+              SubmitData(values);
               console.log(values);
             }}
-            >
+          >
             {({ setFieldValue }) => (
               <Form className="">
                 {/* Advertiser Details Section */}
-                <div className="section ">
+                <div className="section">
                   <h3 className="text-xl mb-[20px]">Advertiser Details</h3>
                   <div className="form-row">
                     <div className="form-group">
@@ -65,42 +79,27 @@ const AdvertiseProperty = () => {
                         type="email"
                         name="email"
                         placeholder="Email"
-                        required
-                        />
+                      />
                       <ErrorMessage name="email" component="div" className="error" />
                     </div>
                     <div className="form-group">
                       <label>Name</label>
                       <Field
                         type="text"
-                        name="name"
+                        name="advertiserName"
                         placeholder="Name"
-                        required
-                        />
-                      <ErrorMessage name="name" component="div" className="error" />
+                      />
+                      <ErrorMessage name="advertiserName" component="div" className="error" />
                     </div>
                   </div>
                   <div className="form-row">
-                    <div className="form-group">
-                      <label>City</label>
-                      <Field as="select" name="city" required>
-                        <option value="">City</option>
-                        {Cities.map((item, index) => (
-                          <option key={index} value={item}>
-                            {item}
-                          </option>
-                        ))}
-                      </Field>
-                      <ErrorMessage name="city" component="div" className="error" />
-                    </div>
                     <div className="form-group">
                       <label>Phone</label>
                       <Field
                         type="text"
                         name="phone"
                         placeholder="Phone"
-                        required
-                        />
+                      />
                       <ErrorMessage name="phone" component="div" className="error" />
                     </div>
                   </div>
@@ -111,10 +110,10 @@ const AdvertiseProperty = () => {
                   <h3>Property Details</h3>
                   <div className="form-row">
                     <div className="form-group">
-                      <label>Offer</label>
-                      <Field as="select" name="offer">
-                        <option value="For Sale">For Sale</option>
-                        <option value="For Rent">For Rent</option>
+                      <label>Offer Type</label>
+                      <Field as="select" name="offerType">
+                        <option value="Sale">For Sale</option>
+                        <option value="Rent">For Rent</option>
                       </Field>
                     </div>
                     <div className="form-group">
@@ -132,40 +131,28 @@ const AdvertiseProperty = () => {
                     <div className="form-group">
                       <label>Space</label>
                       <Field
-                        type="text"
+                        type="number"
                         name="space"
                         placeholder="Space"
-                        />
+                      />
                       <ErrorMessage name="space" component="div" className="error" />
                     </div>
                     <div className="form-group">
                       <label>Measurement Unit</label>
                       <Field as="select" name="measurementUnit">
-                        <option value="Square meter">Square meter</option>
+                        <option value="sqm">Square meter</option>
                       </Field>
                     </div>
                   </div>
                   <div className="form-row">
                     <div className="form-group">
-                      <label>Range Rate</label>
+                      <label>Price</label>
                       <Field
-                        type="text"
+                        type="number"
                         name="price"
                         placeholder="Expected Price"
-                        />
+                      />
                       <ErrorMessage name="price" component="div" className="error" />
-                    </div>
-                    <div className="form-group">
-                      <label>Price Per</label>
-                      <Field as="select" name="pricePer">
-                        <option value="Square meter">Square meter</option>
-                      </Field>
-                    </div>
-                    <div className="form-group">
-                      <label>Currency</label>
-                      <Field as="select" name="currency">
-                        <option value="JOD">JOD</option>
-                      </Field>
                     </div>
                   </div>
                   <div className="form-row">
@@ -187,17 +174,18 @@ const AdvertiseProperty = () => {
                       type="text"
                       name="address"
                       placeholder="Street Name / Town"
-                      />
+                    />
+                    <ErrorMessage name="address" component="div" className="error" />
                   </div>
+        
                   <div className="form-group">
                     <label>Additional Description (Optional)</label>
                     <Field
                       as="textarea"
                       name="description"
                       placeholder="Additional Description"
-                      />
+                    />
                   </div>
-        
                 </div>
 
                 {/* Services Section */}

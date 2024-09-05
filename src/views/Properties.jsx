@@ -21,7 +21,7 @@ export default function Properties() {
 
   const [currentPage, setCurrentPage] = useState(parseInt(getQueryParam('page')) || 1);
 
-  const listingsPerPage = 2;
+  const listingsPerPage =7;
   const totalPages = Math.ceil(data.length / listingsPerPage);
   const indexOfLastListing = currentPage * listingsPerPage;
   const indexOfFirstListing = indexOfLastListing - listingsPerPage;

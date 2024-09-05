@@ -1,10 +1,10 @@
-import axios from 'axios';
+import { api } from './ApiCreate';
 
 // Define the function to update data
-const updateData = async (id, updatedField) => {
+const updateData = async (url) => {
     try {
  
-        const response = await axios.put(`http://your-api-url.com/endpoint/${id}`, updatedField);
+        const response = await api.put(url);
 
         console.log('Update successful:', response.data);
         return response.data;

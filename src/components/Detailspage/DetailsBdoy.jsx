@@ -61,7 +61,7 @@ function DetailsBdoy(props) {
 
 <ul>
   <li className=' font-bold'>Services:</li>
-  <li className='my-[20px] ml-[50px]'>Water / Electricity / Tabo / Main Road / Ceiling Storage
+  <li className='my-[20px] ml-[50px]'>{item.services.map((item,index)=>{return <span key={index}>{item}/</span>})}
 </li>
   </ul>
   <table >
@@ -74,16 +74,13 @@ function DetailsBdoy(props) {
   <tbody>
     <tr>
       <td className='py-2 px-4 '>Name:</td>
-      <td className='py-2 px-4'>{item.title}</td>
+      <td className='py-2 px-4'>{item.name}</td>
     </tr>
     <tr >
       <td className='py-2 px-4 '>Phone:</td>
-      <td className='py-2 px-4'>{item.description}</td>
+      <td className='py-2 px-4'>{item.phone}</td>
     </tr>
-    <tr >
-      <td className='py-2 px-4 '>Whatsapp:</td>
-      <td className='py-2 px-4'>{item.description}</td>
-    </tr>
+
   </tbody>
 </table>
     </div>

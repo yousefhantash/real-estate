@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer/Footer';
 import { NavLink } from 'react-router-dom';
 import { Cities } from '../components/Proprties comp/Cities';
+import Post from '../API/Post';
 
 const validationSchema = Yup.object({
     name: Yup.string().required('Name is required'),
@@ -16,10 +17,22 @@ const validationSchema = Yup.object({
     terms: Yup.bool().oneOf([true], 'You must accept the terms and conditions'),
 });
 
+
+
 function Contactus() {
+    const sendMessage = async (data) => {
+        try {
+            const resp = await Post("/api/Property/SubmitContactForm", data);
+            window.location.reload();
+            console.log(resp); 
+        } catch (error) {
+            console.error("Error submitting contact form:", error);
+        }
+    }
+
     const handleSubmit = (values, { setSubmitting }) => {
+        sendMessage(values)
         setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
             setSubmitting(false);
         }, 400);
     };
