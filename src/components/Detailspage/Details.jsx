@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import Navbar from '../Navbar'
 import "./details.css"
 import { useLocation } from 'react-router-dom'
-import item1 from "../../images/Recentlyaddedproperties/item1.jpg";
+import item1 from "../../images/Recentlyaddedproperties/Home-OverView/images.jpeg";
 import PropsItem from '../Recently_Added/PropsItem';
 import { LandContext } from '../../views/PassDataRoute';
 import DetailsBdoy from './DetailsBdoy';
@@ -14,7 +14,7 @@ const data=useContext(LandContext)
 const item=location.state
 
 const RealData=data.filter((product)=>{
- return product.city==item.city
+ return product.propertyType==item.propertyType
 })
 console.log(RealData)
 

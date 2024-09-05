@@ -6,9 +6,22 @@ import PropsItem from '../components/Recently_Added/PropsItem';
 import { LandContext } from '../views/PassDataRoute';
 import Pagination from '../components/Pagination/Pagination';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Get from '../API/Get';
 
 function Admin() {
-  const data = useContext(LandContext);
+  const [data,setData] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await Get("/api/Property/Admin/GetAdvertiseRequests");
+        setData(result); 
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, []);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -38,11 +51,16 @@ function Admin() {
 
 
   const handleAccept = (id) => {
-    const resp = updateData(``, { isApproved: true });
+    setData((prevData) => prevData.filter((item) => item.requestId !== id));
+
+    const response=updateData(`/api/Property/Admin/ApproveRequest/${id}`)
     // Logic for handling accept
   };
 
-  const handleRefuse = () => {
+  const handleRefuse = (id) => {
+    setData((prevData) => prevData.filter((item) => item.requestId !== id));
+    const response=updateData(`/api/Property/Admin/RejectRequest/${id}`)
+
     // Logic for handling refuse
   };
 
@@ -56,18 +74,18 @@ function Admin() {
         </p>
 
         {currentListings.map((item) => (
-          <React.Fragment key={item.propertyId}>
+          <React.Fragment key={item.requestId}>
             <PropsItem item={item} />
             <div className="flex justify-center my-1 ">
               <button
-                onClick={() => handleAccept(item.propertyId)}
+                onClick={() => handleAccept(item.requestId)}
                 className="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-400 duration-300 text-white"
               >
                 Accept
               </button>
 
               <button
-                onClick={handleRefuse}
+                onClick={() =>handleRefuse(item.requestId)}
                 className="bg-red-500 px-4 py-2 rounded-lg hover:bg-red-400 duration-300 text-white"
               >
                 Refuse

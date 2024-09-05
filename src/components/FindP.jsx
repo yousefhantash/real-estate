@@ -97,8 +97,8 @@ onSubmit(values)      }}
             className="min-w-40 h-9 rounded border text-[#6C757D]"
           >
             <option value="">All Offers</option>
-            <option value="For Sale">For Sale</option>
-            <option value="For Rent">For Rent</option>
+            <option value="Sale">Sale</option>
+            <option value="Rent">Rent</option>
           </Field>
 
           <button
