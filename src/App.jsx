@@ -6,6 +6,7 @@ import "./App.css"
 import { useEffect } from 'react';
 import axios from 'axios';
 import Get from './API/Get';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -17,6 +18,8 @@ return (
 
     <div>
 <PassDataRoute/>
+<ToastContainer />
+
     </div>
 
 
