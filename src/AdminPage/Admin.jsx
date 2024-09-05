@@ -16,7 +16,6 @@ function Admin() {
     return new URLSearchParams(location.search).get(param);
   };
 
-  // State for current page
   const [currentPage, setCurrentPage] = useState(parseInt(getQueryParam('page')) || 1);
 
   const listingsPerPage = 7;

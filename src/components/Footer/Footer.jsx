@@ -40,7 +40,7 @@ export default function Footer(){
   <nav>
     <ul className="space-y-2 pb-[20px]">
 
-      {propertiesType.map((item,index)=>{return <button key={item.index} className="text-gray-600 hover:underline py-[4px] w-full" onClick={()=>{getDataByType(item.Type)}}><li className="" >{item.Type}</li></button>})}
+      {propertiesType.map((item,index)=>{return <button key={index} className="text-gray-600 hover:underline py-[4px] w-full" onClick={()=>{getDataByType(item.Type)}}><li className="" >{item.Type}</li></button>})}
     </ul>
   </nav>
 </div>

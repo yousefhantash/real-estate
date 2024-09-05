@@ -12,7 +12,7 @@ function PropsItem(props) {
 
     <div  className="grid md:grid-cols-4 sm:grid-cols-1 px-3 py-3 border-r-8 border-custom-blue items-center">
       <div><img src={item1} alt="Property" className=' sm:mx-auto ' /></div>
-      <div>
+      <div className='md:my-[1px] my-8 '>
         <h1 className='text-custom-blue text-xl'>{item.name}</h1>
         <div className='flex items-center text-zinc-400'>
           <span className='flex items-center mr-4'>
@@ -30,7 +30,7 @@ function PropsItem(props) {
           </span>
         </div>
       </div>
-      <div className='my-2'>
+      <div className='md:my-2 my-8 '>
         <h1 className='mx-4 text-custom-blue text-xl '>Services</h1>
         <div className='flex'>
           <div className='h-20 w-0.5 bg-gray-200'></div>
