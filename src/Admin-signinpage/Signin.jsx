@@ -1,7 +1,9 @@
 import { Formik , Form, Field} from 'formik'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import Post from "./../API/Post"
+import { ToastContainer, toast } from 'react-toastify';
+
 function Signin() {
 const navigate=useNavigate();
   const initialValue={email:"",
@@ -11,16 +13,22 @@ const navigate=useNavigate();
     try {
       const status = await Post("api/Property/Admin/Login", { email, password });
       if (status === 200) {
+
+
         navigate("/admin/advertiesReq");
         localStorage.setItem("email", email);
+        toast.success("Login successfully!"); // Use success toast
       } else {
         navigate("/"); 
       }
     } catch (error) {
       console.error("Login error:", error);
+
       navigate("/"); 
     }
   };
+  useEffect(()=>{localStorage.clear()
+  },[])
     return (
     <div>
    
@@ -97,6 +105,7 @@ const navigate=useNavigate();
          </Form>
        )}
      </Formik>
+
        </div>
 
 
