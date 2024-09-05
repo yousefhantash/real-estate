@@ -23,12 +23,13 @@ const AdvertiseProperty = () => {
   return (
     <>
       <Navbar />
+
       <img src={cityImage} alt="City" className="w-full" />
-      <div className="container mx-auto">
+      <div className="container mx-auto  px-5 shadow-2xl  ">
         <h1 className="form-title text-center text-2xl	my-[40px]	text-[#1a3462]">
           Advertise a Property
         </h1>
-        <div className="advertise-property shadow-2xl flex justify-center	text-[#6c757d]">
+        <div className="advertise-property flex justify-center	text-[#6c757d]">
           <Formik
             initialValues={{
               email: "",
@@ -51,7 +52,7 @@ const AdvertiseProperty = () => {
             onSubmit={(values) => {
               console.log(values);
             }}
-          >
+            >
             {({ setFieldValue }) => (
               <Form className="">
                 {/* Advertiser Details Section */}
@@ -65,7 +66,7 @@ const AdvertiseProperty = () => {
                         name="email"
                         placeholder="Email"
                         required
-                      />
+                        />
                       <ErrorMessage name="email" component="div" className="error" />
                     </div>
                     <div className="form-group">
@@ -75,7 +76,7 @@ const AdvertiseProperty = () => {
                         name="name"
                         placeholder="Name"
                         required
-                      />
+                        />
                       <ErrorMessage name="name" component="div" className="error" />
                     </div>
                   </div>
@@ -99,7 +100,7 @@ const AdvertiseProperty = () => {
                         name="phone"
                         placeholder="Phone"
                         required
-                      />
+                        />
                       <ErrorMessage name="phone" component="div" className="error" />
                     </div>
                   </div>
@@ -134,7 +135,7 @@ const AdvertiseProperty = () => {
                         type="text"
                         name="space"
                         placeholder="Space"
-                      />
+                        />
                       <ErrorMessage name="space" component="div" className="error" />
                     </div>
                     <div className="form-group">
@@ -151,7 +152,7 @@ const AdvertiseProperty = () => {
                         type="text"
                         name="price"
                         placeholder="Expected Price"
-                      />
+                        />
                       <ErrorMessage name="price" component="div" className="error" />
                     </div>
                     <div className="form-group">
@@ -186,7 +187,7 @@ const AdvertiseProperty = () => {
                       type="text"
                       name="address"
                       placeholder="Street Name / Town"
-                    />
+                      />
                   </div>
                   <div className="form-group">
                     <label>Additional Description (Optional)</label>
@@ -194,7 +195,7 @@ const AdvertiseProperty = () => {
                       as="textarea"
                       name="description"
                       placeholder="Additional Description"
-                    />
+                      />
                   </div>
         
                 </div>

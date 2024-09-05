@@ -17,7 +17,7 @@ const navigate=useNavigate();
 
         navigate("/admin/advertiesReq");
         localStorage.setItem("email", email);
-        toast.success("Login successfully!"); // Use success toast
+        toast.success("Login successfully!"); 
       } else {
         navigate("/"); 
       }
