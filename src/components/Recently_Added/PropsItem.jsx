@@ -8,7 +8,7 @@ function PropsItem(props) {
   return (
   
               
-    <div key={item.id} className='grid bg-white my-24 shadow-xl' >
+    <div key={item.id} className='grid bg-white mt-24 shadow-xl' >
 
     <div  className="grid md:grid-cols-4 sm:grid-cols-1 px-3 py-3 border-r-8 border-custom-blue items-center">
       <div><img src={item1} alt="Property" className=' sm:mx-auto ' /></div>

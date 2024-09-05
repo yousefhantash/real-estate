@@ -27,8 +27,12 @@ const navigate=useNavigate();
       navigate("/"); 
     }
   };
-  useEffect(()=>{localStorage.clear()
+  useEffect(()=>{
+    localStorage.clear()
   },[])
+
+
+  
     return (
     <div>
    

@@ -1,17 +1,50 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import AdminNavbar from './AdminNavbar';
 import AdminPage from './AdminPage';
 import updateData from '../API/Put';
+import PropsItem from '../components/Recently_Added/PropsItem';
+import { LandContext } from '../views/PassDataRoute';
+import Pagination from '../components/Pagination/Pagination';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function Admin() {
+  const data = useContext(LandContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const handleAccept = (id,) => {
-     const resp=updateData(``,{isApproved:true})
+  const getQueryParam = (param) => {
+    return new URLSearchParams(location.search).get(param);
+  };
+
+  // State for current page
+  const [currentPage, setCurrentPage] = useState(parseInt(getQueryParam('page')) || 1);
+
+  const listingsPerPage = 7;
+  const totalPages = Math.ceil(data.length / listingsPerPage);
+  const indexOfLastListing = currentPage * listingsPerPage;
+  const indexOfFirstListing = indexOfLastListing - listingsPerPage;
+  const currentListings = data.slice(indexOfFirstListing, indexOfLastListing);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    navigate(`?page=${pageNumber}`);
+  };
+
+  useEffect(() => {
+    const page = parseInt(getQueryParam('page')) || 1;
+    setCurrentPage(page);
+  }, [location.search]);
+
+
+
+
+  const handleAccept = (id) => {
+    const resp = updateData(``, { isApproved: true });
     // Logic for handling accept
   };
 
   const handleRefuse = () => {
-
+    // Logic for handling refuse
   };
 
   return (
@@ -19,25 +52,21 @@ function Admin() {
       <AdminNavbar />
       <div className="container mx-auto">
         <AdminPage />
-          <p className="font-bold text-lg my-10 text-[#0056B3] tracking-widest">
-            Property Advertise Requests:
-          </p>
-        <div className="shadow-xl p-4">
+        <p className="font-bold text-lg my-10 text-[#0056B3] tracking-widest">
+          Property Advertise Requests:
+        </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-8 gap-4 px-3 py-3 border-r-8 border-custom-blue items-center my-[2em]">
-
-            <div className="col-span-2">Property Name</div>
-            <div className="col-span-2">Property Description</div>
-            <div className="col-span-1">Other Info</div>
-            <div className="col-span-1">Additional Info</div>
-            
-            <div className="col-span-1 flex justify-center md:justify-end space-x-2">
+        {currentListings.map((item) => (
+          <React.Fragment key={item.propertyId}>
+            <PropsItem item={item} />
+            <div className="flex justify-center my-1 ">
               <button
-                onClick={handleAccept}
+                onClick={() => handleAccept(item.propertyId)}
                 className="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-400 duration-300 text-white"
               >
                 Accept
               </button>
+
               <button
                 onClick={handleRefuse}
                 className="bg-red-500 px-4 py-2 rounded-lg hover:bg-red-400 duration-300 text-white"
@@ -45,12 +74,15 @@ function Admin() {
                 Refuse
               </button>
             </div>
-          </div>
-        </div>
+          </React.Fragment>
+        ))}
 
-        {/*  */}
-
-
+        {/* Pagination Component */}
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
       </div>
     </>
   );
