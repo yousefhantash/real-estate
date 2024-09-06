@@ -19,7 +19,8 @@ const navigate=useNavigate();
         localStorage.setItem("email", email);
         toast.success("Login successfully!"); 
       } else {
-        navigate("/"); 
+        toast.error("Invalid credentials. Please try again.");
+
       }
     } catch (error) {
       console.error("Login error:", error);

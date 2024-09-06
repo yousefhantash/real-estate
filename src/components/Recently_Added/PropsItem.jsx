@@ -4,7 +4,7 @@ import btn_icon from "../../images/Recentlyaddedproperties/Vector.png";
 import React, { createContext, useContext, useRef } from 'react';
 
 function PropsItem(props) {
-    const {item}=props;
+    const {item,url}=props;
   return (
   
               
@@ -43,7 +43,7 @@ function PropsItem(props) {
         </div>
       </div>
       <div className=''>
-      <NavLink to={`/property/post/${item.name}` } state={item}
+      <NavLink to={url} state={item}
       className=' rec-det-btn flex lg:w-40 lg:h-15'  >
         <button className='mx-auto'><img src={btn_icon} alt="Details " /> Details</button>
         </NavLink>

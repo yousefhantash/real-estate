@@ -25,7 +25,7 @@ function Addedproperties() {
 
 
 
-<PropsItem item={item} key={item.propertyId}/>
+<PropsItem item={item} url={`/property/post/${item.name}`} key={item.propertyId}/>
       ))}
       </>
   )

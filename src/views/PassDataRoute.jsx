@@ -16,6 +16,8 @@ import Get from '../API/Get'
 import SearchedPage from '../components/Search/SearchedPage'
 import Allproprties from '../AdminPage/Allproprties'
 import Themessages from '../AdminPage/Themessages'
+import AllTheDetails from '../components/Detailspage/AllTheDetails'
+import AdminDetailsPage from '../AdminPage/AdminDetailsPage'
 export const LandContext=createContext();
 
 function PassDataRoute() {
@@ -70,7 +72,8 @@ console.log(data)
 
       <Route path=":title" element={<Properties/>}/>
       </Route>
-      <Route path="property/post/:title" element={<Details />} />
+      <Route path="property/post/:title" element={<AllTheDetails/>} />
+      <Route path="property/Admin/:title" element={<AdminDetailsPage/>} />
       <Route path="/contact" element={<Contactus/>} />
       <Route path="/policy" element={<Policy/>} />
       <Route path="/terms" element={<Terms/>} />

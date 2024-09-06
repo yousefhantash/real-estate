@@ -14,7 +14,8 @@ export default function Properties() {
   const location = useLocation();
   const navigate = useNavigate();
   const data=location.state;
-
+  useEffect(()=>{    localStorage.clear()
+  },[])
   const getQueryParam = (param) => {
     return new URLSearchParams(location.search).get(param);
   };
@@ -50,7 +51,7 @@ export default function Properties() {
         ) : (
           <>
             {currentListings.map((item, index) => (
-              <PropsItem item={item} key={item.propertyId} />
+              <PropsItem item={item} url={`/property/post/${item.name}`} key={item.propertyId} />
             ))}
             <Pagination
               currentPage={currentPage}
