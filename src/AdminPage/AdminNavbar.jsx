@@ -16,6 +16,8 @@ function AdminNavbar() {
 
   const SignOutfunc = () => {
     localStorage.clear();
+    toast.success("sign out successfully!"); 
+
     navigate('/adminsignin');
   };
 
@@ -45,8 +47,7 @@ function AdminNavbar() {
 
         <li>
           <NavLink to='/admin/themessages' className='text-yellow-600 hover:text-[#0056B3] font-semibold'>
-            The Messages
-          </NavLink>
+FeedBacks          </NavLink>
         </li>
 
         <li>

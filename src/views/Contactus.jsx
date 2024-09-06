@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import Navbar from '../components/Navbar';
@@ -20,6 +20,9 @@ const validationSchema = Yup.object({
 
 
 function Contactus() {
+
+    useEffect(()=>{    localStorage.clear()
+    },[])
     const sendMessage = async (data) => {
         try {
             const resp = await Post("/api/Property/SubmitContactForm", data);
@@ -106,8 +109,7 @@ function Contactus() {
                                             name="city"
                                             className="w-full h-9 rounded border text-[#6C757D] p-2"
                                         >
-                                            <option value="">Select City</option>
-                                            <option value="all">All Cities</option>
+                                            <option hidden>Select City</option>
                                             {Cities.map((item,index)=>{                                           return <option value={item}>{item}</option>
 })}
                                         </Field>
@@ -121,8 +123,8 @@ function Contactus() {
                                             name="subject"
                                             className="w-full h-9 rounded border text-[#6C757D] p-2"
                                         >
-                                            <option value="">Select Subject</option>
-                                            <option value="all">All subjects</option>
+                                            <option hidden>Select Subject</option>
+                                            <option value="FeedBack">FeedBack</option>
                                         </Field>
                                         <ErrorMessage name="subject" component="div" className="text-red-500 text-sm" />
                                     </div>

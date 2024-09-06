@@ -67,7 +67,9 @@ function Admin() {
   return (
     <>
       <AdminNavbar />
+      
       <div className="container mx-auto">
+        
         <AdminPage />
         <p className="font-bold text-lg my-10 text-[#0056B3] tracking-widest">
           Property Advertise Requests:
@@ -75,7 +77,7 @@ function Admin() {
 
         {currentListings.map((item) => (
           <React.Fragment key={item.requestId}>
-            <PropsItem item={item} />
+<PropsItem item={item} url={`/property/Admin/${item.name}`} key={item.propertyId}/>
             <div className="flex justify-center my-1 ">
               <button
                 onClick={() => handleAccept(item.requestId)}

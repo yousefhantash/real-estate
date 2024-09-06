@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../components/Footer/Footer'
 import Navbar from '../components/Navbar'
 
 function Terms() {
+
+  useEffect(()=>{    localStorage.clear()
+  },[])
   return (
     <div>
     <Navbar/>

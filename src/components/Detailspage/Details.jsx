@@ -14,19 +14,18 @@ const data=useContext(LandContext)
 const item=location.state
 
 const RealData=data.filter((product)=>{
- return product.propertyType==item.propertyType
+ return product.propertyType==item.propertyType||product.city==item.city
 })
 console.log(RealData)
 
   return (
-    <div className='bg-white'>
-<Navbar/>
+<>
 <div className='small-bg-city'></div>
 <div className='mx-auto w-[50%]'>
 {/*  */}
 
 
-<h1 className="text-center mt-[40px] mb-[15px] text-custom-midblue capitalize ">{item.name} [Property ID {item.propertyId}]  </h1>
+<h1 className="text-center mt-[40px] mb-[15px] text-custom-midblue capitalize ">{item.address} [Property ID {item.propertyId}]  </h1>
 <p className='text-center '>{item.description}</p>
 <img src={item1} alt="" className='mx-auto my-[30px] md:w-[301px] md:h-[341px]' />
 <DetailsBdoy item={item}/>  
@@ -46,8 +45,8 @@ console.log(RealData)
         © 2024 <span className='text-blue-600 py-[8px] hover:text-sky-300 '>Palestine.</span> All rights reserved.
       </div>
 </div>
-    </div>
-  )
+</>
+)
 }
 
 export default Details

@@ -1,9 +1,9 @@
 import { api } from "./ApiCreate";
 
-const Delete=async (data)=>{
+const Delete=async (url)=>{
     try{
 
-        const rspo= await api.delete()
+        const rspo= await api.delete(url)
     }
 catch(error){}
 
