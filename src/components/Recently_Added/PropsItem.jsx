@@ -38,7 +38,7 @@ function PropsItem(props) {
             <svg fill="#0E88E2" viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
               <path d="M12,1.78,1.43,9.18l1.14,1.64L4,9.82V22H20V9.82l1.43,1,1.14-1.64Zm-.17,15.77-1.66-1.1,1.54-2.32-2-2,2.46-3.68,1.66,1.1-1.54,2.32,2,2Z"></path>
             </svg>
-            <p className='text-zinc-400'>{item.services.map((item,index)=>{return <span key={index}>{item}/</span>})}</p>
+            <p className='text-zinc-400'>{item.servicesString}</p>
           </div>
         </div>
       </div>

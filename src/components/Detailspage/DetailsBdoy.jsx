@@ -61,7 +61,7 @@ function DetailsBdoy(props) {
 
 <ul>
   <li className=' font-bold'>Services:</li>
-  <li className='my-[20px] ml-[50px]'>{item.services.map((item,index)=>{return <span key={index}>{item}/</span>})}
+  <li className='my-[20px] ml-[50px]'>{item.servicesString}
 </li>
   </ul>
   <table >
@@ -74,11 +74,11 @@ function DetailsBdoy(props) {
   <tbody>
     <tr>
       <td className='py-2 px-4 '>Name:</td>
-      <td className='py-2 px-4'>{item.name}</td>
+      <td className='py-2 px-4'>{item.name}{item.advertiserName}</td>
     </tr>
     <tr >
       <td className='py-2 px-4 '>Phone:</td>
-      <td className='py-2 px-4'>{item.phone}</td>
+      <td className='py-2 px-4'>{item.phone}{item.advertiserPhone}</td>
     </tr>
 
   </tbody>

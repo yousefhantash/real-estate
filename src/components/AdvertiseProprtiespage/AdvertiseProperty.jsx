@@ -22,6 +22,8 @@ const validationSchema = Yup.object({
   price: Yup.number().required("Price is required").positive("Must be a positive number"),
   services: Yup.array().of(Yup.string()),
   agree: Yup.bool().oneOf([true], "You must agree to the terms"),
+  description: Yup.string(), 
+
 });
 
 const AdvertiseProperty = () => {
@@ -58,7 +60,8 @@ const AdvertiseProperty = () => {
               space: "",
               measurementUnit: "sqm",
               price: "",
-              services: [],
+              description: "",
+              services: "",
               agree: false,
             }}
             validationSchema={validationSchema}
