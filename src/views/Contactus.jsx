@@ -125,7 +125,7 @@ function Contactus() {
                                         >
                                             <option hidden>Select Subject</option>
                                             <option value="FeedBack">FeedBack</option>
-                                            <option value="FeedBack">Report a Problem</option>
+                                            <option value="Report">Report a Problem</option>
                                         </Field>
                                         <ErrorMessage name="subject" component="div" className="text-red-500 text-sm" />
                                     </div>

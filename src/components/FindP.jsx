@@ -27,9 +27,9 @@ const navigate=useNavigate()
 
 
   return (
-    <div className="flex items-center justify-center bg-[#DEEFF9] small-bg-city bg-no-repeat bg-bottom h-[280px]  w-[full] ">
+    <div className="flex items-center justify-center bg-[#DEEFF9] small-bg-city bg-no-repeat bg-bottom h-[400px]  w-[full] ">
 
-        <div className="min-h-[77px]  flex flex-col items-start gap-4 ">
+        <div className="min-h-[77px]  flex flex-col items-start gap-4  ">
 
             <p className=" text-[#646D7C] text-2xl ">
             Find a property...
@@ -45,7 +45,7 @@ const navigate=useNavigate()
 onSubmit(values)      }}
     >
       {() => (
-        <Form className="grid grid-cols-2 lg:flex lg:justify-center gap-8 rounded px-3.5 py-4 border bg-white">
+        <Form className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-center gap-8 rounded px-3.5 py-4 border bg-white">
           <Field
             as="select"
             id="CityField"
