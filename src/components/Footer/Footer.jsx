@@ -31,8 +31,6 @@ export default function Footer(){
           <p className="mb-[16px] text-gray-600">We are here to help and answer your questions, and we are always happy to hear from you.</p>
           <p className="mb-[16px] text-customDarkGray">Email:<br/> support@palestine.io</p>
           <div className="flex space-x-4 py-[8px]">
-            <a href="https://www.linkedin.com/company/palestine-io"><img src='https://palestine.io/images/linkedin-copy.svg' className="fab fa-linkedin w-[24px] h-[24px]" alt="at"></img></a>
-            <a href="https://facebook.com/palestine.io"><img src='https://palestine.io/images/facebook-circular-logo.svg' className="fab fa-facebook w-[24px] h-[24px]"alt="at" ></img></a>
           </div>
         </div>
         <div className='mx-[37px] px-[15px]'>
