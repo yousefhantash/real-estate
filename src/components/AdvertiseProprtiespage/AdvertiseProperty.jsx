@@ -83,7 +83,7 @@ const AdvertiseProperty = () => {
                         name="email"
                         placeholder="Email"
                       />
-                      <ErrorMessage name="email" component="div" className="error" />
+                      <ErrorMessage name="email" component="div" className="error  text-red-600" />
                     </div>
                     <div className="form-group">
                       <label>Name</label>
@@ -92,7 +92,7 @@ const AdvertiseProperty = () => {
                         name="advertiserName"
                         placeholder="Name"
                       />
-                      <ErrorMessage name="advertiserName" component="div" className="error" />
+                      <ErrorMessage name="advertiserName" component="div" className="error  text-red-600" />
                     </div>
                   </div>
                   <div className="form-row">
@@ -103,7 +103,7 @@ const AdvertiseProperty = () => {
                         name="phone"
                         placeholder="Phone"
                       />
-                      <ErrorMessage name="phone" component="div" className="error" />
+                      <ErrorMessage name="phone" component="div" className="error  text-red-600" />
                     </div>
                   </div>
                 </div>
@@ -122,14 +122,14 @@ const AdvertiseProperty = () => {
                     <div className="form-group">
                       <label>Property Type</label>
                       <Field as="select" name="propertyType">
-                        <option value="">Choose</option>
+                        <option value="" hidden>Choose</option>
                         {propertiesType.map((item, index) => (
                           <option key={index} value={item.Type}>
                             {item.Type}
                           </option>
                         ))}
                       </Field>
-                      <ErrorMessage name="propertyType" component="div" className="error" />
+                      <ErrorMessage name="propertyType" component="div" className="error  text-red-600" />
                     </div>
                     <div className="form-group">
                       <label>Space</label>
@@ -138,7 +138,7 @@ const AdvertiseProperty = () => {
                         name="space"
                         placeholder="Space"
                       />
-                      <ErrorMessage name="space" component="div" className="error" />
+                      <ErrorMessage name="space" component="div" className="error  text-red-600" />
                     </div>
                     <div className="form-group">
                       <label>Measurement Unit</label>
@@ -155,14 +155,14 @@ const AdvertiseProperty = () => {
                         name="price"
                         placeholder="Expected Price"
                       />
-                      <ErrorMessage name="price" component="div" className="error" />
+                      <ErrorMessage name="price" component="div" className="error  text-red-600" />
                     </div>
                   </div>
                   <div className="form-row">
                     <div className="form-group">
                       <label>City</label>
                       <Field as="select" name="city">
-                        <option value="">City</option>
+                        <option hidden value="">City</option>
                         {Cities.map((item, index) => (
                           <option key={index} value={item}>
                             {item}
@@ -178,7 +178,7 @@ const AdvertiseProperty = () => {
                       name="address"
                       placeholder="Street Name / Town"
                     />
-                    <ErrorMessage name="address" component="div" className="error" />
+                    <ErrorMessage name="address" component="div" className="error  text-red-600" />
                   </div>
         
                   <div className="form-group">
@@ -239,7 +239,7 @@ const AdvertiseProperty = () => {
                       Terms of Use
                     </NavLink>
                   </label>
-                  <ErrorMessage name="agree" component="div" className="error" />
+                  <ErrorMessage name="agree" component="div" className="error  text-red-600" />
                 </div>
 
                 <div className="form-group">
