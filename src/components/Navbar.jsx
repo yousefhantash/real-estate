@@ -31,7 +31,7 @@ function Navbar() {
       <div className='flex flex-col md:flex-row items-center gap-4 md:gap-10 lg:gap-40'>
         {/* Logo */}
         <div className='flex items-start ml-1.5'>
-          <a className='text-[#CF991E] text-[24px] sm:text-[27px] md:text-[29px] lg:text-[32px] font-bold'>ME</a>
+          <a className='text-[#CF991E] text-[24px] sm:text-[27px] md:text-[29px] lg:text-[32px] font-bold'>RE</a>
           <a className='text-[#0056B3] text-[30px] sm:text-[34px] md:text-[36px] lg:text-[40px] tracking-[4px] mt-1 font-bold'>
             Palestine
           </a>

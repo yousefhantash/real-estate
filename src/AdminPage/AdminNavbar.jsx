@@ -25,7 +25,7 @@ function AdminNavbar() {
     <nav className='flex flex-col lg:flex-row justify-center items-center bg-white min-h-[94px] p-4'>
       <div className='flex flex-col lg:flex-row items-center gap-4 lg:gap-40'>
         <div className='flex items-start ml-1.5'>
-          <a className='text-[#CF991E] text-[24px] sm:text-[27px] lg:text-[32px] font-bold'>ME</a>
+          <a className='text-[#CF991E] text-[24px] sm:text-[27px] lg:text-[32px] font-bold'>RE</a>
           <a className='text-[#0056B3] text-[30px] sm:text-[34px] lg:text-[40px] tracking-[4px] mt-1 font-bold'>
             Palestine
           </a>
