@@ -39,7 +39,7 @@ const navigate=useNavigate();
    
       <div className="flex flex-col justify-center items-center h-screen">
       <div className="flex items-start ml-1.5 xl   justify-center mt-[2em]  ">
-    <h1 className="text-[#CF991E] sm:text-[20px] md:text-[30px] text-[40px] font-bold "> ME</h1>
+    <h1 className="text-[#CF991E] sm:text-[20px] md:text-[30px] text-[40px] font-bold "> RE</h1>
     <h1 className="text-[#0056B3] sm:text-[20px] md:text-[30px] text-[40px] tracking-[4.00px] mt-1 font-bold ">Palestine</h1>
 
     </div>
