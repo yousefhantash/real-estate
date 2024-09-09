@@ -1,4 +1,3 @@
-Certainly! Here’s the README formatted and ready to be copied:
 
 ---
 
