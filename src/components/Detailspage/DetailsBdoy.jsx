@@ -1,90 +1,81 @@
-import React from 'react'
-import "./details.css"
+import React from 'react';
+import './details.css';
 
 function DetailsBdoy(props) {
-    const {item}=props
+  const { item } = props;
+
+  if (!item) {
+    return <p>No property details available.</p>;
+  }
+
   return (
-    <div>
-      <table className='pb-[80px]'>
-    <tbody>
-      <tr className='mt-[10px]'>
-        <td className='font-bold pr-4'>Property Details:</td></tr>
-      <tr className='mt-[10px]'>
+    <div className="p-6 bg-white rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="col-span-1">
+        <h2 className="text-xl font-bold mb-4 text-gray-800">Property Details</h2>
+        <table className="w-full">
+          <tbody>
+            <tr className="border-b border-gray-200">
+              <td className="py-2 pr-4 font-semibold text-gray-600">Published:</td>
+              <td className="py-2 text-blue-500 font-medium">{item.createdAt}</td>
+            </tr>
+            <tr className="border-b border-gray-200">
+              <td className="py-2 pr-4 font-semibold text-gray-600">Offer:</td>
+              <td className="py-2 text-blue-500 font-medium">{item.offerType}</td>
+            </tr>
+            <tr className="border-b border-gray-200">
+              <td className="py-2 pr-4 font-semibold text-gray-600">Property Type:</td>
+              <td className="py-2 text-blue-500 font-medium">{item.propertyType}</td>
+            </tr>
+            <tr className="border-b border-gray-200">
+              <td className="py-2 pr-4 font-semibold text-gray-600">Space:</td>
+              <td className="py-2 text-blue-500 font-medium">{item.space} sqm</td>
+            </tr>
+            <tr className="border-b border-gray-200">
+              <td className="py-2 pr-4 font-semibold text-gray-600">Expected Price:</td>
+              <td className="py-2 text-blue-500 font-medium">{item.price} JOD</td>
+            </tr>
+            <tr className="border-b border-gray-200">
+              <td className="py-2 pr-4 font-semibold text-gray-600">City:</td>
+              <td className="py-2 text-blue-500 font-medium">{item.city}</td>
+            </tr>
+            <tr>
+              <td className="py-2 pr-4 font-semibold text-gray-600">Address:</td>
+              <td className="py-2 text-blue-500 font-medium">{item.address}</td>
+            </tr>
+            <tr>
+              <td className="py-2 pr-4 font-semibold text-gray-600">Additional Description:</td>
+              <td className="py-2 text-blue-500 font-medium">{item.description}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-        <td className=' pr-4 '>Published:</td>
-        <td className='text-blue-500 font-bold text-md'>{item.createdAt}</td>
       
-      </tr>
-      <tr className='mt-[10px]'>
-      
-        <td className=' pr-4'>Offer:</td>
-        <td className='text-blue-500 font-bold text-md'>{item.offerType}</td>
-      
-      </tr>
-      <tr className='mt-[10px]'>
-      
-        <td className=' pr-4'>Property Type:</td>
-        <td className='text-blue-500 font-bold text-md'>{item.propertyType}</td>
-      
-      </tr>
-      <tr className='mt-[10px]'>
-      
-        <td className=' pr-4'>Space:</td>
-        <td className='text-blue-500 font-bold text-md'>{item.space}</td>
-      
-      </tr>
-  
-      <tr className='mt-[10px] mb-[40px]'>
-      
-        <td className=' pr-4'>Expected price: </td>
-        <td className='text-blue-500 font-semibold text-md'>{item.price} JOD</td>
-      
-      </tr>
-      <tr className='mt-[10px]'>
-      
-        <td className=' pr-4'>City:</td>
-        <td className='text-blue-500 font-bold text-md'>{item.city}</td>
-      
-      </tr>
 
-
-      <tr className='mt-[10px]'>
-        <td className=' pr-4'>Address:</td>
-        <td className='text-blue-500 font-bold text-md'>{item.address}</td>
-      </tr>
-      <tr className='mt-[10px]'>
-        <td className=' pr-4'>Additional Description:</td>
-        <td className='text-blue-500 font-bold text-md'>{item.description}</td>
-      </tr>
-    </tbody>
-  </table>
-
-<ul>
-  <li className=' font-bold'>Services:</li>
-  <li className='my-[20px] ml-[50px]'>{item.servicesString}
-</li>
-  </ul>
-  <table >
-  <thead>
-    <tr className=''>
-      <th className='text-left py-2 px-4 font-bold'>Advertiser Details</th>
-      <th className='text-left py-2 px-4'></th> 
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td className='py-2 px-4 '>Name:</td>
-      <td className='py-2 px-4'>{item.name}{item.advertiserName}</td>
-    </tr>
-    <tr >
-      <td className='py-2 px-4 '>Phone:</td>
-      <td className='py-2 px-4'>{item.phone}{item.advertiserPhone}</td>
-    </tr>
-
-  </tbody>
-</table>
+      <div className="col-span-1 lg:col-span-2">
+        <h2 className="text-xl font-bold mb-4 text-gray-800">Advertiser Details</h2>
+        <table className="w-full">
+          <tbody>
+            <tr className="border-b border-gray-200">
+              <td className="py-2 pr-4 font-semibold text-gray-600">Name:</td>
+              <td className="py-2 text-gray-700">{item.name || item.advertiserName}</td>
+            </tr>
+            <tr>
+              <td className="py-2 pr-4 font-semibold text-gray-600">Phone:</td>
+              <td className="py-2 text-gray-700">{item.phone || item.advertiserPhone}</td>
+            </tr>
+          </tbody>
+          
+        </table>
+      <div className="col-span-1 my-14">
+        <h2 className="text-xl font-bold mb-4 text-gray-800">Services</h2>
+        <ul className="list-disc list-inside text-gray-700">
+          <li className="ml-4">{item.servicesString}</li>
+        </ul>
+      </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default DetailsBdoy
+export default DetailsBdoy;

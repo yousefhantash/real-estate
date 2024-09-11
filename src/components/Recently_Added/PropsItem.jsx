@@ -13,8 +13,8 @@ function PropsItem(props) {
       };
     return (
         <div key={item.propertyId} className='grid bg-white mt-24 shadow-xl'>
-            <div className="grid  md:grid-cols-4 sm:grid-cols-1 px-3 py-3 border-r-8 border-custom-blue items-center">
-                <div><img src={item1} alt="Property" className='sm:mx-auto' /></div>
+            <div className="grid  md:grid-cols-4 grid-cols-1 px-3 py-3 border-r-8 border-custom-blue items-center">
+                <div className=''><img src={item1} alt="Property" className='sm:mx-auto' /></div>
                 <div className='md:my-[1px] my-8'>
                     <h1 className='text-custom-blue text-xl'>{item.address}</h1>
                     <div className='flex items-center text-zinc-400'>
@@ -46,21 +46,25 @@ function PropsItem(props) {
                     </div>
                 </div>
                 <div className=''>
-                    <NavLink className='rec-det-btn flex lg:w-40 lg:h-15' onClick={toggleDetails}>
-                        <button className='mx-auto detail-button ' >
+                    <button className='rec-det-btn flex lg:w-40 lg:h-15' onClick={toggleDetails}>
+                        <div className='mx-auto  ' >
                             <img src={btn_icon} alt="Details" /> Details
-                        </button>
-                    </NavLink>
+                        </div>
+                    </button>
                 </div>
 
-                <div
-                    className={`transition-all ease-in-out duration-500 transform ${
+
+            
+
+
+            </div>
+            <div
+                    className={` transition-all ease-in-out duration-500 transform ${
                         show ? 'opacity-100 h-auto' : 'opacity-0 h-0 overflow-hidden'
                     }`}
                 >
-                    {show && <DetailsBdoy className="mx-auto" item={item} />}
+                    {show && <DetailsBdoy  item={item} />}
                 </div>
-            </div>
         </div>
     );
 }
