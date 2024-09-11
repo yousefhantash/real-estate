@@ -23,7 +23,6 @@ const navigate=useNavigate();
 
       }
     } catch (error) {
-      console.error("Login error:", error);
 
       navigate("/"); 
     }
@@ -83,7 +82,6 @@ const navigate=useNavigate();
         }) => (
           <Form  className=''>
    
-{console.log(values)}
             <span className='font-bold'>Email</span>
            <input  className={` border-black	my-[10px] w-full p-3 border rounded-lg shadow-sm     focus:outline-none focus:ring-2 focus:ring-blue-500 `}
              type="email"

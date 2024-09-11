@@ -22,7 +22,6 @@ function Buying() {
 
     }, 0);
 
-    console.log(searchedData); 
   };
 
   return (

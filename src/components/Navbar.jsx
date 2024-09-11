@@ -37,7 +37,6 @@ function Navbar() {
           </a>
         </div>
 
-        {/* Navbar Links */}
         <ul className='flex flex-col md:flex-row md:gap-6 lg:gap-9 text-center md:text-left sections mt-5'>
           <li>
             <NavLink to='/' onClick={scrollTop} className='text-[#6C757D] hover:text-[#0056B3] font-medium'>
@@ -93,9 +92,7 @@ function Navbar() {
           </li>
 
           <li>
-            <div className='font-semibold text-amber-500 mt-[5px] underline'>
-              <NavLink to='/adminsignin'>Admin</NavLink>
-            </div>
+         
           </li>
         </ul>
       </div>

@@ -23,7 +23,6 @@ function Renting() {
 
     }, 0);
 
-    console.log(searchedData); 
   };
 
 

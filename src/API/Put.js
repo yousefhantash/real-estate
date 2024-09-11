@@ -6,10 +6,8 @@ const updateData = async (url) => {
  
         const response = await api.put(url);
 
-        console.log('Update successful:', response.data);
         return response.data;
     } catch (error) {
-        console.error('Error updating data:', error);
         throw error; 
     }
 };

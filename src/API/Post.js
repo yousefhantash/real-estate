@@ -8,7 +8,6 @@ const Post = async (url, data) => {
     });
     return status; 
   } catch (error) {
-    console.error("Error in POST request:", error);
     return 500; 
   }
 };

@@ -5,6 +5,5 @@ export const getdata = async () => {
       const response = await axios.get('');
       return response.data.products;
     } catch (error) {
-      console.error('API call failed:', error);
     }
   };

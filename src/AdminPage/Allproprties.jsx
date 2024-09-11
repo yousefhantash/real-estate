@@ -27,7 +27,6 @@ const ref=useRef()
       const resp=await Delete(`api/Property/Admin/DeleteProperty/${id}`)
     }
 catch(error){
-console.log(error)
 
 
 }
