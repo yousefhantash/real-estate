@@ -21,7 +21,7 @@ export default function Properties() {
   };
 
   const [currentPage, setCurrentPage] = useState(parseInt(getQueryParam('page')) || 1);
-
+console.log(data)
   const listingsPerPage =5;
   const totalPages = Math.ceil(data.length / listingsPerPage);
   const indexOfLastListing = currentPage * listingsPerPage;
@@ -36,7 +36,6 @@ export default function Properties() {
     const page = parseInt(getQueryParam('page')) || 1;
     setCurrentPage(page);
   }, [location.search]);
-
   return (
     <div>
       <Navbar />
@@ -47,11 +46,16 @@ export default function Properties() {
         <p className='text-white p-4'></p>
       </div>      <div className="container mx-auto p-4">
         {currentListings.length === 0 ? (
+          
           <p className="text-center text-gray-600">No properties available.</p>
         ) : (
           <>
             {currentListings.map((item, index) => (
-              <PropsItem item={item} url={`/property/post/${item.name}`} key={item.propertyId} />
+         <>
+         <PropsItem item={item} url={`/property/Admin/${item.name}`} key={item.propertyId}/>
+          {          console.log(item)
+          }     
+          </>
             ))}
             <Pagination
               currentPage={currentPage}
