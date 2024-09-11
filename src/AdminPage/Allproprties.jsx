@@ -47,7 +47,7 @@ catch(error){
 const searchByid=(e)=>{
   e.preventDefault(); 
   if(propertyId!==""){
-    setData(originaldata.filter((item) => item.propertyId.toString() === propertyId)); 
+    setData(originaldata.filter((item) => item.city.toLowerCase() === propertyId.toLowerCase())); 
     }else{
 setData(originaldata)
   }
@@ -64,7 +64,7 @@ setPropertyId("")
         <AdminNavbar/>
 
         <form onSubmit={searchByid} className='flex justify-center '>
- <input type="text" placeholder='  Enter The Property Id:' className='rounded-md mr-[10px] border-black border-2' value={propertyId} onChange={(e)=>{setPropertyId(e.target.value)}}/>
+ <input type="text" placeholder='  Enter The Property City:' className='rounded-md mr-[10px] border-black border-2' value={propertyId} onChange={(e)=>{setPropertyId(e.target.value)}}/>
   <input type="submit" value="search" className='bg-sky-500 px-4 py-2 rounded-lg hover:bg-sky-700 duration-300 text-white cursor-pointer'/>
 </form>
 
