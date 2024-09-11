@@ -45,13 +45,11 @@ function PropsItem(props) {
                         </div>
                     </div>
                 </div>
-                <div className=''>
-                    <button className='rec-det-btn flex lg:w-40 lg:h-15' onClick={toggleDetails}>
+                    <button className='rec-det-btn sm:w-full flex lg:w-40 lg:h-15' onClick={toggleDetails}>
                         <div className='mx-auto  ' >
                             <img src={btn_icon} alt="Details" /> Details
                         </div>
                     </button>
-                </div>
 
 
             
