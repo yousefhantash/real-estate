@@ -16,7 +16,6 @@ const item=location.state
 const RealData=data.filter((product)=>{
  return product.propertyType==item.propertyType||product.city==item.city
 })
-console.log(RealData)
 
   return (
 <>

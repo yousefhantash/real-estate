@@ -29,12 +29,10 @@ const validationSchema = Yup.object({
 const AdvertiseProperty = () => {
 
   const SubmitData = async (data) => {
-    console.log('Data inside SubmitData:', data);
     try {
       const response = await Post("/api/Property/SubmitAdvertiseRequest", data);
       window.location.reload();
     } catch (error) {
-      console.error('Error:', error);
     }
   };
 
@@ -67,7 +65,6 @@ const AdvertiseProperty = () => {
             validationSchema={validationSchema}
             onSubmit={(values) => {
               SubmitData(values);
-              console.log(values);
             }}
           >
             {({ setFieldValue }) => (

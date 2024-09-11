@@ -17,7 +17,6 @@ function Admin() {
         const result = await Get("/api/Property/Admin/GetAdvertiseRequests");
         setData(result); 
       } catch (error) {
-        console.error('Error fetching data:', error);
       }
     };
     fetchData();

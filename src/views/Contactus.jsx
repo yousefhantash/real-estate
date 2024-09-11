@@ -27,9 +27,7 @@ function Contactus() {
         try {
             const resp = await Post("/api/Property/SubmitContactForm", data);
             window.location.reload();
-            console.log(resp); 
         } catch (error) {
-            console.error("Error submitting contact form:", error);
         }
     }
 
@@ -110,7 +108,7 @@ function Contactus() {
                                             className="w-full h-9 rounded border text-[#6C757D] p-2"
                                         >
                                             <option hidden>Select City</option>
-                                            {Cities.map((item,index)=>{                                           return <option value={item}>{item}</option>
+                                            {Cities.map((item,index)=>{                                           return <option key={index} value={item}>{item}</option>
 })}
                                         </Field>
                                         <ErrorMessage name="city" component="div" className="text-red-500 text-sm" />

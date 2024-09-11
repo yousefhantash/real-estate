@@ -21,7 +21,6 @@ const navigate=useNavigate()
   navigate(`/property/${values.city}&${values.property}&${values.offerType}`, 
   {state:searchedData})
   window.scrollTo(0, 0)
-    console.log(searchedData); 
   };
 
 

@@ -38,7 +38,6 @@ try{
 
   const result=await Get("/api/Property/GetAllProperties");
   setData(result);
-  console.log(result)
  const approvedResult=result.filter(item=>{return item.isApproved===true})
 setApproveData(approvedResult)
 }
@@ -53,7 +52,6 @@ finally {
 getData();
 
   }, []);
-console.log(data)
  
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;
