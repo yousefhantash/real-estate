@@ -12,7 +12,7 @@ function Platform() {
         </div>
       </div>
 
-      <div className="flex flex-col items-start gap-3.5 self-center h-auto lg:h-[620px] w-full lg:w-[435px] my-10 lg:my-20">
+      <div className="flex flex-col items-center items-start gap-3.5 self-center h-auto lg:h-[620px] w-full lg:w-[435px] my-10 lg:my-20">
         
         <div className="text-xl md:text-2xl font-semibold text-[#5C94B4]">
           Palestine Real Estate Platform

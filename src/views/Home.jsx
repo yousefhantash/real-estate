@@ -12,7 +12,7 @@ import RecaddedData from '../components/Recently_Added/RecaddedData'
     },[])
   return (
     
-    <div>
+    <div className=''>
       <Navbar/>
       <FindP/>
       <Platform/>

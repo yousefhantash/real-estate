@@ -22,6 +22,7 @@ function AdminNavbar() {
   };
 
   return (
+    
     <nav className='flex flex-col lg:flex-row justify-center items-center bg-white min-h-[94px] p-4'>
       <div className='flex flex-col lg:flex-row items-center gap-4 lg:gap-40'>
         <div className='flex items-start ml-1.5'>
