@@ -46,7 +46,7 @@ function PropsItem(props) {
                     </div>
                 </div>
                     <button className='rec-det-btn sm:w-full flex lg:w-40 lg:h-15' onClick={toggleDetails}>
-                        <div className='mx-auto  ' >
+                        <div className='mx-aut  ' >
                             <img src={btn_icon} alt="Details" /> Details
                         </div>
                     </button>
