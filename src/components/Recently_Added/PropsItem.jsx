@@ -33,7 +33,7 @@ function PropsItem(props) {
                         </span>
                     </div>
                 </div>
-                <div className='md:my-2 my-8'>
+                <div className='md:my-2 my-8 overflow-hidden '>
                     <h1 className='mx-4 text-custom-blue text-xl'>Services</h1>
                     <div className='flex'>
                         <div className='h-20 w-0.5 bg-gray-200'></div>
@@ -41,12 +41,12 @@ function PropsItem(props) {
                             <svg fill="#0E88E2" viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12,1.78,1.43,9.18l1.14,1.64L4,9.82V22H20V9.82l1.43,1,1.14-1.64Zm-.17,15.77-1.66-1.1,1.54-2.32-2-2,2.46-3.68,1.66,1.1-1.54,2.32,2,2Z"></path>
                             </svg>
-                            <p className='text-zinc-400'>{item.servicesString}</p>
+                            <p className='text-zinc-400 '>{item.servicesString}</p>
                         </div>
                     </div>
                 </div>
                     <button className='rec-det-btn sm:w-full flex lg:w-40 lg:h-15' onClick={toggleDetails}>
-                        <div className='mx-auto  ' >
+                        <div className='mx-aut  ' >
                             <img src={btn_icon} alt="Details" /> Details
                         </div>
                     </button>
