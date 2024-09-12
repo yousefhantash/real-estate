@@ -23,16 +23,22 @@ function Navbar() {
     window.scrollTo(0, 0);
   };
 
+
+
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   };
+
+
 
   const toggleMobileMenu = () => {
     setMobileMenuVisible(!mobileMenuVisible);
   };
 
+
+
   return (
-    <nav className='bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200'>
+    <nav className='bg-white  w-full z-20 top-0 start-0 border-b border-gray-200'>
       <div className='max-w-screen-xl flex flex-wrap items-center  
       justify-center justify-around
       mx-auto py-4
@@ -66,7 +72,8 @@ function Navbar() {
             </li>
 
             <li className='relative'>
-              <button onClick={toggleDropdown} className='block py-2 px-3 text-[#6C757D] hover:text-[#0056B3]'>
+              <button onClick={toggleDropdown} className='block py-2 px-3 text-[#6C757D]
+              hover:text-[#0056B3]'>
                 Properties
               </button>
               {dropdownVisible && (
@@ -102,7 +109,11 @@ function Navbar() {
 
             <li>
               <NavLink onClick={scrollTop} to='/create' className='block py-2 px-3 bg-[#FF7900] text-white rounded hover:bg-[#ff8c2b]'>
-                Advertise a Property
+
+
+              Advertise a Property
+
+
               </NavLink>
             </li>
           </ul>

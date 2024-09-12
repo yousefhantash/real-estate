@@ -4,7 +4,9 @@ import { Link, NavLink } from 'react-router-dom';
 import Ow2Sell from "../../images/Recentlyaddedproperties/Home-OverView/OW2sell.png";
 
 function Selling() {
-  
+  const scrollTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div className='bg-white shadow p-6 flex flex-col items-center hover:scale-110 duration-300 '>
 
@@ -17,8 +19,8 @@ for cash, we can help you make a
 successful sale.
     </p>           
 
-       <NavLink  to="/create">
-    <button className='my-14 px-10 py-2 bg-custom-blue rounded text-white hover:bg-orange-400 duration-300 bg-orange-500	'>
+       <NavLink  to="/create" onClick={scrollTop}>
+    <button  className='my-14 px-10 py-2 bg-custom-blue rounded text-white hover:bg-orange-400 duration-300 bg-orange-500	'>
     Advertise a property          </button>
     </NavLink >
   </div>  )

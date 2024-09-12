@@ -29,6 +29,8 @@ window.scrollTo(0, 0)
         { city: 'Jerusalem', color: '#68E568' },
     ];
 
+
+
     return (
         <div className="property-list">
         <h2>Real Estate Properties by City</h2>
