@@ -19,13 +19,23 @@ function Addedproperties() {
 
 // here a map for the last 4 items from the data so it  appers in the recently add 
 // 
-    return (<>
+
+   
+  
+  return (<>
     {data.slice(-4).map((item, index) => (
 // 
 
 
 
-<PropsItem item={item} url={`/property/post/${item.name}`} key={item.propertyId}/>
+<PropsItem item={item} 
+url={`/property/post/${item.name}`} 
+key={item.propertyId}
+/>
+      
+   
+      
+      
       ))}
       </>
   )

@@ -36,19 +36,31 @@ function Platform() {
           and organize them, and facilitate the search for them.
         </div>
         
+
+
+
+       
         <div className="text-sm md:text-base text-[#455761]">
           The first task of the platform is to deliver your ad to the <br className="hidden md:block"/>
           largest number of views and give your ad enough time to <br className="hidden md:block"/>
           appear.
         </div>
-        
+
+
+
+
+       
         <div className="text-sm md:text-base text-[#455761]">
+       
+       
           Finally, we are trying hard to make the Palestine real<br className="hidden md:block"/>
           estate platform an open market for everyone by providing<br className="hidden md:block"/>
           a set of electronic services that help you to have a greater<br className="hidden md:block"/>
           understanding of the market, improve the quality of your<br className="hidden md:block"/>
           advertisement, and reach all those interested inside and<br className="hidden md:block"/>
           outside Palestine.
+       
+       
         </div>
 
       </div>

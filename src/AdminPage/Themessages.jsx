@@ -39,11 +39,14 @@ Notifications
       <div className="grid md:grid-cols-3 gap-5 sm:grid-cols-1 px-3 py-3 border-r-8 border-custom-blue items-center">
         <div>
           
+          
           <h1 className='font-bold text-lg text-[#0056B3] tracking-widest'>Details</h1>
           <p>Name: {item.name}</p>
           <p>Email: {item.email}</p>
           <p>Phone: {item.phone}</p>
           <p>City: {item.city}</p>
+
+
         </div>
         <div>
           <h1 className='font-bold text-lg text-[#0056B3] tracking-widest'>{item.subject}</h1>
