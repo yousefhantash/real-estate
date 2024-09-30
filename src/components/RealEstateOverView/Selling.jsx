@@ -20,7 +20,7 @@ successful sale.
     </p>           
 
        <NavLink  to="/create" onClick={scrollTop}>
-    <button  className='my-14 px-10 py-2 bg-custom-blue rounded text-white hover:bg-orange-400 duration-300 bg-orange-500	'>
+    <button  className='my-10 px-10 py-2 bg-custom-blue rounded text-white hover:bg-orange-400 duration-300 bg-orange-500	'>
     Advertise a property          </button>
     </NavLink >
   </div>  )
