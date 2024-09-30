@@ -63,8 +63,8 @@ function Navbar() {
 
 
 
-        <div className={`items-center justify-between ${mobileMenuVisible ? 'block' : 'hidden'} w-full md:flex md:w-auto md:order-1`} id="navbar-sticky">
-          <ul className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white'>
+        <div className={`items-center justify-between ${mobileMenuVisible ? 'block' : 'hidden'} w-full md:flex md:w-auto md:order-1`} id="navbar-sticky ">
+          <ul className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white sections'>
             <li>
               <NavLink to='/' onClick={scrollTop} className="block py-2 px-3 text-[#6C757D] hover:text-[#0056B3]">
                 Home
